@@ -10,106 +10,107 @@ header {
   padding: 2em 0 1em 0;
 }
 
+/* Logo sizes */
 .logo {
-  width: 120px;
+  width: 90px;
+  max-width: 18vw;
   border-radius: 50%;
   margin-bottom: 1em;
 }
-
 .logo-large {
-  width: 360px;
+  width: 260px;
+  max-width: 40vw;
   border-radius: 50%;
   margin-bottom: 1em;
   margin-top: 1em;
 }
 
+/* Headings */
 h1 {
-  font-size: 3em;
+  font-size: 2.3em;
   margin: 0.2em 0 0.1em 0;
   color: #3d3d3d;
 }
-
 h2 {
-  font-size: 1.3em;
+  font-size: 1.05em;
   font-weight: 400;
   color: #6d6d6d;
   margin-bottom: 1em;
 }
 
+/* Navigation */
 .vertical-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2em 0;
 }
-
 .vertical-nav .nav-btn {
   background: #f6e5d6;
   border: none;
-  padding: 1.2em 4em;
-  margin: 1em 0;
+  padding: 0.8em 2.8em;
+  margin: 0.8em 0;
   border-radius: 18px;
-  font-size: 1.4em;
+  font-size: 1.15em;
   cursor: pointer;
   box-shadow: 1px 2px 12px #e0d8c8;
   transition: background 0.2s;
   text-decoration: none;
   color: #333;
 }
-
 .vertical-nav .nav-btn:hover {
   background: #e8d7c3;
 }
 
 .horizontal-nav {
   position: absolute;
-  top: 18px;
-  left: 18px;
+  top: 16px;
+  left: 16px;
   display: flex;
-  gap: 1em;
+  gap: 0.7em;
   z-index: 10;
 }
-
 .horizontal-nav .nav-btn {
   background: #f6e5d6;
   border: none;
-  padding: 0.8em 2.2em;
-  border-radius: 18px;
-  font-size: 1.1em;
+  padding: 0.6em 1.3em;
+  border-radius: 16px;
+  font-size: 1em;
   cursor: pointer;
   box-shadow: 1px 2px 12px #e0d8c8;
   transition: background 0.2s;
   text-decoration: none;
   color: #333;
 }
-
 .horizontal-nav .nav-btn:hover {
   background: #e8d7c3;
 }
 
+/* Main content area */
 main {
-  max-width: 900px;
+  max-width: 680px;
+  width: 96vw;
   margin: 2em auto;
-  padding: 2em;
+  padding: 1.2em;
   background: #fffbe9;
   border-radius: 20px;
-  box-shadow: 0 0 30px #ece4d0;
+  box-shadow: 0 0 20px #ece4d0;
 }
 
 /* Qui suis-je layout */
 .qui-flex {
   display: flex;
-  gap: 3em;
+  gap: 2em;
   align-items: center;
   justify-content: space-between;
 }
 .qui-text {
-  flex: 1 1 55%;
-  font-size: 1.1em;
+  flex: 1 1 60%;
+  font-size: 1em;
   color: #3d3d3d;
 }
 .qui-text h3 {
-  font-size: 2.7em;
+  font-size: 2em;
   font-weight: 700;
   margin-bottom: 0.5em;
 }
@@ -120,74 +121,90 @@ main {
 .qui-text .en-bref {
   background: none;
   color: #222;
-  font-size: 1.08em;
+  font-size: 1.01em;
   margin-top: 1.2em;
   font-weight: 700;
   display: flex;
   align-items: center;
-}
-.qui-text .en-bref strong {
-  color: #2b2b2b;
 }
 .qui-text .community {
   color: #dc4973;
   font-weight: 700;
 }
 .qui-photo {
-  flex: 1 1 35%;
+  flex: 1 1 40%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .qui-img {
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 30px #ece4d0;
+  box-shadow: 0 0 20px #ece4d0;
   background: #e0e0e0;
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-  main {
-    max-width: 99vw;
-    padding: 1em;
-  }
-  .qui-flex {
-    flex-direction: column;
-    gap: 2em;
-    align-items: flex-start;
-  }
-  .qui-img {
-    width: 220px;
-    height: 220px;
-  }
-  .qui-text {
-    font-size: 1em;
-  }
-  .qui-text h3 {
-    font-size: 1.5em;
-  }
+/* Services blocks */
+.services-container {
+  display: flex;
+  gap: 1.2em;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+.services-admin, .services-community {
+  background: #e5e4f6;
+  border-radius: 14px;
+  padding: 1.2em;
+  flex: 1 1 240px;
+  min-width: 180px;
+  margin-bottom: 1em;
+  box-shadow: 0 0 8px #e0d8c8;
+}
+.services-community {
+  background: #f6e4eb;
+}
+.services-admin h4, .services-community h4 {
+  margin-top: 0;
+  color: #3d3d3d;
+  font-size: 1.1em;
+}
+.services-admin ul, .services-community ul {
+  padding-left: 1.0em;
+}
+.cta {
+  background: #a3bfae;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1.1em;
+  border-radius: 12px;
+  font-size: 0.95em;
+  margin-top: 1em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #c1d5c9;
+}
+.cta:hover {
+  background: #89a99b;
 }
 
-/* Footer and other sections unchanged from previous version */
+/* Footer */
 footer {
   background: #f8eedc;
   border-top: 1px solid #e0d8c8;
-  padding: 2em;
+  padding: 1.5em 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  font-size: 1em;
+  font-size: 0.98em;
 }
 .footer-logo {
-  width: 90px;
+  width: 60px;
   border-radius: 50%;
 }
 .footer-info {
-  flex: 1 1 180px;
+  flex: 1 1 120px;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -197,15 +214,15 @@ footer {
   text-decoration: underline dotted;
 }
 .footer-social {
-  flex: 1 1 180px;
+  flex: 1 1 120px;
   display: flex;
   align-items: center;
-  gap: 0.6em;
+  gap: 0.5em;
   justify-content: center;
   margin-bottom: 1em;
 }
 .footer-social img {
-  width: 32px;
+  width: 22px;
   filter: grayscale(30%);
   transition: filter 0.2s;
 }
@@ -213,12 +230,12 @@ footer {
   filter: none;
 }
 .footer-contact {
-  flex: 2 1 300px;
+  flex: 2 1 180px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  font-size: 1.1em;
+  font-size: 1em;
   margin-bottom: 1em;
 }
 .footer-contact p {
@@ -227,7 +244,62 @@ footer {
   margin: 0.3em 0;
 }
 .footer-contact img {
-  width: 22px;
+  width: 16px;
   margin-right: 8px;
   vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 750px) {
+  main {
+    max-width: 100vw;
+    padding: 0.7em;
+  }
+  .qui-flex,
+  .services-container {
+    flex-direction: column;
+    gap: 1em;
+    align-items: stretch;
+  }
+  .qui-photo {
+    justify-content: flex-start;
+  }
+  .qui-img {
+    width: 120px;
+    height: 120px;
+  }
+  .qui-text h3 {
+    font-size: 1.3em;
+  }
+  .logo,
+  .logo-large {
+    width: 22vw;
+    max-width: 90px;
+  }
+  .footer-logo {
+    width: 36px;
+  }
+  .footer-social img {
+    width: 18px;
+  }
+  .footer-contact img {
+    width: 13px;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.3em;
+  }
+  h2 {
+    font-size: 0.93em;
+  }
+  .qui-text {
+    font-size: 0.91em;
+  }
+  .footer-info,
+  .footer-social,
+  .footer-contact {
+    font-size: 0.9em;
+  }
 }
