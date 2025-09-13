@@ -7,25 +7,27 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo M.A.A.D" class="logo">
-    <h1>M.A.A.D</h1>
-    <h2>Marie Assistante Admin & Digitale</h2>
-    <div class="socials">
-      <a href="#" title="Instagram"><img src="instagram.png" alt="Instagram"></a>
-      <a href="#" title="WhatsApp"><img src="whatsapp.png" alt="WhatsApp"></a>
-      <a href="#" title="LinkedIn"><img src="linkedin.png" alt="LinkedIn"></a>
-    </div>
-    <nav>
-      <button onclick="showPage('qui')">Qui suis-je ?</button>
-      <button onclick="showPage('services')">Services</button>
-      <button onclick="showPage('contact')">Contact</button>
-    </nav>
-  </header>
+<header>
+  <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="logo">
+  <h1>M.A.A.D</h1>
+  <h2>Marie Assistante Admin & Digitale</h2>
+  <div class="socials">
+    <a href="#" title="Instagram"><img src="icons8-instagram-100.png" alt="Instagram"></a>
+    <a href="#" title="WhatsApp"><img src="icons8-whatsapp-100.png" alt="WhatsApp"></a>
+    <a href="#" title="LinkedIn"><img src="icons8-linkedin-100.png" alt="LinkedIn"></a>
+    <a href="#" title="Facebook"><img src="icons8-facebook-100.png" alt="Facebook"></a>
+  </div>
+  <nav>
+    <button onclick="showPage('qui')">Qui suis-je ?</button>
+    <button onclick="showPage('services')">Services</button>
+    <button onclick="showPage('contact')">Contact</button>
+  </nav>
+</header>
   <main>
-    <section id="qui" class="page">
-      <h3>Qui suis-je ?</h3>
-      <p>
+   <section id="qui" class="page">
+  <h3>Qui suis-je ?</h3>
+  <img src="Portrait.jpg" alt="Portrait de Marie" style="width:140px;border-radius:50%;display:block;margin:0 auto 1em;">
+  <p>
         Je m’appelle Marie, assistante administrative et commerciale indépendante et community manager.<br>
         Organisée, rigoureuse et passionnée par le digital, j’accompagne les artisans et les restaurateurs dans la gestion de leur quotidien et le développement de leur visibilité en ligne.<br><br>
         Maman, rêveuse et toujours curieuse, j’aime apporter des solutions simples, modernes et efficaces.<br><br>
@@ -80,22 +82,23 @@
       <!-- Future: add contact form here -->
     </section>
   </main>
-  <footer>
-    <img src="logo.png" alt="Logo M.A.A.D" class="footer-logo">
-    <div class="footer-info">
-      <span>&copy; 2025 M.A.A.D</span>
-      <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
-    </div>
-    <div class="footer-social">
-      <a href="#" title="Instagram"><img src="instagram.png" alt="Instagram"></a>
-      <a href="#" title="LinkedIn"><img src="linkedin.png" alt="LinkedIn"></a>
-    </div>
-    <div class="footer-contact">
-      <p><img src="location.png" alt="Location"> Domiciliée à Ondes, 31330<br>
-      À distance partout en France</p>
-      <p><img src="email.png" alt="Email"> marie.blancogimet@outlook.fr</p>
-    </div>
-  </footer>
+ <footer>
+  <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="footer-logo">
+  <div class="footer-info">
+    <span>&copy; 2025 M.A.A.D</span>
+    <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+  </div>
+  <div class="footer-social">
+    <a href="#" title="Instagram"><img src="icons8-instagram-100.png" alt="Instagram"></a>
+    <a href="#" title="LinkedIn"><img src="icons8-linkedin-100.png" alt="LinkedIn"></a>
+    <a href="#" title="Facebook"><img src="icons8-facebook-100.png" alt="Facebook"></a>
+  </div>
+  <div class="footer-contact">
+    <p><img src="icons8-location-100.png" alt="Location" style="width:18px;"> Domiciliée à Ondes, 31330<br>
+    À distance partout en France</p>
+    <p><img src="icons8-email-100.png" alt="Email" style="width:18px;"> marie.blancogimet@outlook.fr</p>
+  </div>
+</footer>
   <script>
     function showPage(page) {
       document.querySelectorAll('.page').forEach(function(el) {
