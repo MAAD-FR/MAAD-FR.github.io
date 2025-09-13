@@ -2,112 +2,36 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>M.A.A.D - Marie Assistante Admin & Digitale</title>
+  <title>M.A.A.D - Accueil</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="logo">
-  <h1>M.A.A.D</h1>
-  <h2>Marie Assistante Admin & Digitale</h2>
-  <div class="socials">
-    <a href="#" title="Instagram"><img src="icons8-instagram-100.png" alt="Instagram"></a>
-    <a href="#" title="WhatsApp"><img src="icons8-whatsapp-100.png" alt="WhatsApp"></a>
-    <a href="#" title="LinkedIn"><img src="icons8-linkedin-100.png" alt="LinkedIn"></a>
-    <a href="#" title="Facebook"><img src="icons8-facebook-100.png" alt="Facebook"></a>
-  </div>
-  <nav>
-    <button onclick="showPage('qui')">Qui suis-je ?</button>
-    <button onclick="showPage('services')">Services</button>
-    <button onclick="showPage('contact')">Contact</button>
-  </nav>
-</header>
-  <main>
-   <section id="qui" class="page">
-  <h3>Qui suis-je ?</h3>
-  <img src="Portrait.jpg" alt="Portrait de Marie" style="width:140px;border-radius:50%;display:block;margin:0 auto 1em;">
-  <p>
-        Je m’appelle Marie, assistante administrative et commerciale indépendante et community manager.<br>
-        Organisée, rigoureuse et passionnée par le digital, j’accompagne les artisans et les restaurateurs dans la gestion de leur quotidien et le développement de leur visibilité en ligne.<br><br>
-        Maman, rêveuse et toujours curieuse, j’aime apporter des solutions simples, modernes et efficaces.<br><br>
-        Mon objectif : vous faire gagner du temps pour que vous puissiez vous concentrer sur l’essentiel, votre métier.<br><br>
-        Honnête et à l’écoute, je m’adapte à vos besoins pour créer un accompagnement sur mesure, que ce soit pour vos tâches administratives, vos réseaux sociaux ou vos projets de digitalisation.<br><br>
-        👉 En bref, je suis votre partenaire de confiance pour vous libérer l’esprit et booster votre activité !
-      </p>
-    </section>
-    <section id="services" class="page" style="display:none;">
-      <h3>Services</h3>
-      <div class="services-container">
-        <div class="services-admin">
-          <h4>Gestion administrative et commerciale</h4>
-          <p><strong>40 € / heure</strong> &nbsp; <strong>245 € / jour</strong></p>
-          <ul>
-            <li>Organisation de vos agendas</li>
-            <li>Gestion du courrier et des mails</li>
-            <li>Mise en place de procédures</li>
-            <li>Assistance dans l’organisation de votre entreprise</li>
-            <li>Gestion des fournitures de bureau</li>
-            <li>Création et suivi devis et factures</li>
-            <li>Gestion des stocks et inventaire</li>
-            <li>Harmonisation de vos outils digitaux</li>
-            <li>Démarches administratives</li>
-            <li>Saisie et mise en page de vos présentations</li>
-            <li>Relance clients et fournisseurs</li>
-            <li>Archivage</li>
-            <li>Gestion des achats et des ventes</li>
-            <li>Mise en règlement des fournisseurs</li>
-          </ul>
-          <button class="cta">Bye bye le stress</button>
-        </div>
-        <div class="services-community">
-          <h4>Community manager</h4>
-          <p><strong>Forfait 600 €/mois – 3 posts par semaine</strong></p>
-          <ul>
-            <li>Création de publications</li>
-            <li>Programmation & suivi des contenus</li>
-            <li>Gestion du calendrier éditorial</li>
-            <li>Analyse et reporting mensuel des résultats</li>
-            <li>Gestion de communautés (DM et commentaires)</li>
-          </ul>
-          <button class="cta">Je veux plus de followers !</button>
-        </div>
-      </div>
-    </section>
-    <section id="contact" class="page" style="display:none;">
-      <h3>Contact</h3>
-      <p>Contactez-moi à <a href="mailto:marie.blancogimet@outlook.fr">marie.blancogimet@outlook.fr</a><br>
-      Domiciliée à Ondes, 31330<br>
+  <header class="home-header">
+    <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="logo-large">
+    <h1>M.A.A.D</h1>
+    <h2>Marie Assistante Admin & Digitale</h2>
+    <nav class="vertical-nav">
+      <a href="qui.html" class="nav-btn">Qui suis-je ?</a>
+      <a href="services.html" class="nav-btn">Services</a>
+      <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+  </header>
+  <footer>
+    <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="footer-logo">
+    <div class="footer-info">
+      <span>&copy; 2025 M.A.A.D</span>
+      <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+    </div>
+    <div class="footer-social">
+      <a href="#" title="Instagram"><img src="icons8-instagram-100.png" alt="Instagram"></a>
+      <a href="#" title="LinkedIn"><img src="icons8-linkedin-100.png" alt="LinkedIn"></a>
+      <a href="#" title="Facebook"><img src="icons8-facebook-100.png" alt="Facebook"></a>
+    </div>
+    <div class="footer-contact">
+      <p><img src="icons8-location-100.png" alt="Location"> Domiciliée à Ondes, 31330<br>
       À distance partout en France</p>
-      <!-- Future: add contact form here -->
-    </section>
-  </main>
- <footer>
-  <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="footer-logo">
-  <div class="footer-info">
-    <span>&copy; 2025 M.A.A.D</span>
-    <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
-  </div>
-  <div class="footer-social">
-    <a href="#" title="Instagram"><img src="icons8-instagram-100.png" alt="Instagram"></a>
-    <a href="#" title="LinkedIn"><img src="icons8-linkedin-100.png" alt="LinkedIn"></a>
-    <a href="#" title="Facebook"><img src="icons8-facebook-100.png" alt="Facebook"></a>
-  </div>
-  <div class="footer-contact">
-    <p><img src="icons8-location-100.png" alt="Location" style="width:18px;"> Domiciliée à Ondes, 31330<br>
-    À distance partout en France</p>
-    <p><img src="icons8-email-100.png" alt="Email" style="width:18px;"> marie.blancogimet@outlook.fr</p>
-  </div>
-</footer>
-  <script>
-    function showPage(page) {
-      document.querySelectorAll('.page').forEach(function(el) {
-        el.style.display = 'none';
-      });
-      document.getElementById(page).style.display = 'block';
-    }
-    // Show Qui suis-je by default
-    showPage('qui');
-  </script>
+      <p><img src="icons8-email-100.png" alt="Email"> marie.blancogimet@outlook.fr</p>
+    </div>
+  </footer>
 </body>
 </html>
