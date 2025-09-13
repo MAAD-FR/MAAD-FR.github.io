@@ -82,6 +82,14 @@ h2 {
 .horizontal-nav .nav-btn:hover {
   background: #e8d7c3;
 }
+.container-qui {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #f8eedc;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
 
 /* Main content area: NO background, NO border radius, NO box-shadow */
 main {
