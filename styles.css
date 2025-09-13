@@ -10,11 +10,6 @@ header {
   padding: 2em 0 1em 0;
 }
 
-.home-header {
-  text-align: center;
-  padding: 4em 0 2em 0;
-}
-
 .logo {
   width: 120px;
   border-radius: 50%;
@@ -22,7 +17,7 @@ header {
 }
 
 .logo-large {
-  width: 360px; /* 3x bigger logo on home */
+  width: 360px;
   border-radius: 50%;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -48,7 +43,6 @@ h2 {
   margin-bottom: 1em;
 }
 
-/* Vertical nav for home page */
 .vertical-nav {
   display: flex;
   flex-direction: column;
@@ -74,7 +68,6 @@ h2 {
   background: #e8d7c3;
 }
 
-/* Horizontal nav for other pages */
 .horizontal-nav {
   position: absolute;
   top: 18px;
@@ -102,7 +95,7 @@ h2 {
 }
 
 main {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 2em auto;
   padding: 2em;
   background: #fffbe9;
@@ -228,4 +221,63 @@ footer {
   width: 22px;
   margin-right: 8px;
   vertical-align: middle;
+}
+
+/* Qui suis-je layout */
+.qui-flex {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qui-text {
+  flex: 1 1 55%;
+  font-size: 1.3em;
+  color: #3d3d3d;
+}
+
+.qui-text h3 {
+  font-size: 2.7em;
+  font-weight: 700;
+}
+
+.qui-text strong {
+  font-weight: 700;
+  color: #222;
+}
+
+.qui-text .en-bref {
+  background: none;
+  color: #222;
+  font-size: 1.1em;
+  margin-top: 1.2em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.qui-text .en-bref strong {
+  color: #2b2b2b;
+}
+
+.qui-text .community {
+  color: #dc4973;
+  font-weight: 700;
+}
+
+.qui-photo {
+  flex: 1 1 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qui-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #ece4d0;
+  background: #e0e0e0;
 }
