@@ -94,7 +94,7 @@ main {
   box-shadow: 0 0 20px #ece4d0;
 }
 
-/* Qui suis-je layout: allow wider text before wrapping */
+/* Qui suis-je layout: allow wider text before wrapping, photo moved left */
 .qui-flex {
   display: flex;
   gap: 2.5em;
@@ -106,7 +106,7 @@ main {
   flex: 1 1 78%;
   font-size: 1.08em;
   color: #3d3d3d;
-  max-width: 74vw; /* 10 more characters width */
+  max-width: 74vw;
   margin-right: 2em;
 }
 .qui-text h3 {
@@ -118,8 +118,8 @@ main {
   flex: 1 1 22%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-left: 2.5em;
+  justify-content: flex-start; /* move image left */
+  margin-left: 0.5em; /* less left margin than before */
 }
 .qui-img {
   width: 200px;
@@ -149,14 +149,15 @@ main {
   font-weight: 700;
 }
 
-/* Services blocks: exact pastel colours, side by side on desktop, NO yellow square */
+/* Services blocks: exact pastel colours, side by side on desktop, NO yellow background */
 .services-container {
   display: flex;
   gap: 2.5em;
   flex-wrap: nowrap;
   margin-top: 1em;
   justify-content: flex-start;
-  background: none; /* Remove yellow square */
+  background: none; /* Remove any background */
+  box-shadow: none;  /* Remove any box shadow */
 }
 .services-admin {
   background: #bdbbc6;
@@ -198,6 +199,8 @@ main {
   list-style: none;
   columns: 2;
   column-gap: 2.5em;
+  background: none; /* Remove any background */
+  box-shadow: none;
 }
 .services-community ul {
   columns: 1;
@@ -315,6 +318,7 @@ footer {
   }
   .qui-photo {
     justify-content: flex-start;
+    margin-left: 0;
   }
   .qui-img {
     width: 100px;
