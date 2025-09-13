@@ -23,13 +23,6 @@ header {
   margin-top: 1em;
 }
 
-.portrait-img {
-  width: 140px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1em auto;
-}
-
 h1 {
   font-size: 3em;
   margin: 0.2em 0 0.1em 0;
@@ -95,7 +88,7 @@ h2 {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 2em auto;
   padding: 2em;
   background: #fffbe9;
@@ -103,57 +96,82 @@ main {
   box-shadow: 0 0 30px #ece4d0;
 }
 
-.page h3, main h3 {
-  font-size: 2em;
-  color: #3d3d3d;
-}
-
-.services-container {
+/* Qui suis-je layout */
+.qui-flex {
   display: flex;
-  gap: 2em;
-  flex-wrap: wrap;
-  margin-top: 1em;
+  gap: 3em;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.services-admin, .services-community {
-  background: #e5e4f6;
-  border-radius: 18px;
-  padding: 2em;
-  flex: 1 1 350px;
-  min-width: 280px;
-  margin-bottom: 1em;
-  box-shadow: 0 0 10px #e0d8c8;
-}
-
-.services-community {
-  background: #f6e4eb;
-}
-
-.services-admin h4, .services-community h4 {
-  margin-top: 0;
+.qui-text {
+  flex: 1 1 55%;
+  font-size: 1.1em;
   color: #3d3d3d;
 }
-
-.services-admin ul, .services-community ul {
-  padding-left: 1.2em;
+.qui-text h3 {
+  font-size: 2.7em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.qui-text strong {
+  font-weight: 700;
+  color: #222;
+}
+.qui-text .en-bref {
+  background: none;
+  color: #222;
+  font-size: 1.08em;
+  margin-top: 1.2em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.qui-text .en-bref strong {
+  color: #2b2b2b;
+}
+.qui-text .community {
+  color: #dc4973;
+  font-weight: 700;
+}
+.qui-photo {
+  flex: 1 1 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qui-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #ece4d0;
+  background: #e0e0e0;
 }
 
-.cta {
-  background: #a3bfae;
-  color: #fff;
-  border: none;
-  padding: 0.7em 1.5em;
-  border-radius: 15px;
-  font-size: 1em;
-  margin-top: 1em;
-  cursor: pointer;
-  box-shadow: 0 2px 8px #c1d5c9;
+/* Responsive Design */
+@media (max-width: 900px) {
+  main {
+    max-width: 99vw;
+    padding: 1em;
+  }
+  .qui-flex {
+    flex-direction: column;
+    gap: 2em;
+    align-items: flex-start;
+  }
+  .qui-img {
+    width: 220px;
+    height: 220px;
+  }
+  .qui-text {
+    font-size: 1em;
+  }
+  .qui-text h3 {
+    font-size: 1.5em;
+  }
 }
 
-.cta:hover {
-  background: #89a99b;
-}
-
+/* Footer and other sections unchanged from previous version */
 footer {
   background: #f8eedc;
   border-top: 1px solid #e0d8c8;
@@ -164,24 +182,20 @@ footer {
   align-items: flex-start;
   font-size: 1em;
 }
-
 .footer-logo {
   width: 90px;
   border-radius: 50%;
 }
-
 .footer-info {
   flex: 1 1 180px;
   text-align: center;
   margin-bottom: 1em;
 }
-
 .footer-info a {
   color: #3d3d3d;
   margin: 0 5px;
   text-decoration: underline dotted;
 }
-
 .footer-social {
   flex: 1 1 180px;
   display: flex;
@@ -190,17 +204,14 @@ footer {
   justify-content: center;
   margin-bottom: 1em;
 }
-
 .footer-social img {
   width: 32px;
   filter: grayscale(30%);
   transition: filter 0.2s;
 }
-
 .footer-social img:hover {
   filter: none;
 }
-
 .footer-contact {
   flex: 2 1 300px;
   display: flex;
@@ -210,74 +221,13 @@ footer {
   font-size: 1.1em;
   margin-bottom: 1em;
 }
-
 .footer-contact p {
   display: flex;
   align-items: center;
   margin: 0.3em 0;
 }
-
 .footer-contact img {
   width: 22px;
   margin-right: 8px;
   vertical-align: middle;
-}
-
-/* Qui suis-je layout */
-.qui-flex {
-  display: flex;
-  gap: 3em;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.qui-text {
-  flex: 1 1 55%;
-  font-size: 1.3em;
-  color: #3d3d3d;
-}
-
-.qui-text h3 {
-  font-size: 2.7em;
-  font-weight: 700;
-}
-
-.qui-text strong {
-  font-weight: 700;
-  color: #222;
-}
-
-.qui-text .en-bref {
-  background: none;
-  color: #222;
-  font-size: 1.1em;
-  margin-top: 1.2em;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-}
-
-.qui-text .en-bref strong {
-  color: #2b2b2b;
-}
-
-.qui-text .community {
-  color: #dc4973;
-  font-weight: 700;
-}
-
-.qui-photo {
-  flex: 1 1 35%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.qui-img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 30px #ece4d0;
-  background: #e0e0e0;
 }
