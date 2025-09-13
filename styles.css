@@ -166,7 +166,7 @@ main {
   font-weight: 700;
   width: 100%;
   cursor: pointer;
-  box-shadow: 0 2px 8px #c1d5c9;
+  box-shadow: none;
   text-align: center;
   letter-spacing: .01em;
 }
