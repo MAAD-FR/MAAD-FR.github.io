@@ -83,7 +83,7 @@ h2 {
   background: #e8d7c3;
 }
 
-/* Main content area: wider and a bit shorter for all pages */
+/* Main content area */
 main {
   max-width: 1100px;
   width: 98vw;
@@ -94,7 +94,7 @@ main {
   box-shadow: 0 0 20px #ece4d0;
 }
 
-/* Qui suis-je layout: wider, text spans further, photo shifted right */
+/* Qui suis-je layout: allow wider text before wrapping */
 .qui-flex {
   display: flex;
   gap: 2.5em;
@@ -103,10 +103,10 @@ main {
   min-height: 320px;
 }
 .qui-text {
-  flex: 1 1 75%;
+  flex: 1 1 78%;
   font-size: 1.08em;
   color: #3d3d3d;
-  max-width: 67vw;
+  max-width: 74vw; /* 10 more characters width */
   margin-right: 2em;
 }
 .qui-text h3 {
@@ -115,11 +115,11 @@ main {
   margin-bottom: 0.5em;
 }
 .qui-photo {
-  flex: 1 1 25%;
+  flex: 1 1 22%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-left: 2.5em; /* move image ~5ch right */
+  margin-left: 2.5em;
 }
 .qui-img {
   width: 200px;
@@ -149,16 +149,17 @@ main {
   font-weight: 700;
 }
 
-/* Services blocks: exact pastel colours, side by side on desktop */
+/* Services blocks: exact pastel colours, side by side on desktop, NO yellow square */
 .services-container {
   display: flex;
   gap: 2.5em;
   flex-wrap: nowrap;
   margin-top: 1em;
   justify-content: flex-start;
+  background: none; /* Remove yellow square */
 }
 .services-admin {
-  background: #bdbbc6; /* sampled from the screenshot */
+  background: #bdbbc6;
   border-radius: 24px;
   padding: 2em 2.6em 1.1em 2.6em;
   flex: 1 1 670px;
@@ -172,7 +173,7 @@ main {
   justify-content: flex-start;
 }
 .services-community {
-  background: #c8a9ac; /* sampled from the screenshot */
+  background: #c8a9ac;
   border-radius: 24px;
   padding: 2em 2.6em 1.1em 2.6em;
   flex: 1 1 320px;
@@ -206,7 +207,7 @@ main {
   margin-bottom: 0.45em;
 }
 .cta {
-  background: #6e8f8c; /* sampled from green button in screenshot */
+  background: #6e8f8c;
   color: #fff;
   border: none;
   padding: 0.8em 0;
