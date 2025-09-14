@@ -185,7 +185,13 @@ main {
   font-weight: 700;
   margin-bottom: 0.5em;
 }
-
+.qui-text p {
+  margin: 0 0 1rem;     /* space between paragraphs */
+  line-height: 1.6;     /* easier to read */
+}
+.qui-text p:last-child {
+  margin-bottom: 0;     /* no extra gap at the end of the block */
+}
 .qui-photo {
   flex: 1 1 22%;
   display: flex;
@@ -285,6 +291,11 @@ main {
 
 .services-admin ul li, .services-community ul li {
   margin-bottom: 0.45em;
+}
+.services-admin p,
+.services-community p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
 }
 
 .cta {
