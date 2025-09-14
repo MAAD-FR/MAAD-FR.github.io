@@ -87,14 +87,14 @@ h2 {
 main {
   max-width: 1100px;
   width: 98vw;
-  margin: 0.5em auto;
+  margin: 0.5em auto; /* brings services higher */
   padding: 1em 2em;
   background: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
 
-/* Invisible container for qui page, controls width and layout, no shadow, no border */
+/* Qui page container (ONLY for qui.html) */
 .qui-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -104,7 +104,7 @@ main {
   padding: 2em 2em;
 }
 
-/* Qui suis-je layout: text wider, photo controlled */
+/* Qui suis-je layout */
 .qui-flex {
   display: flex;
   gap: 2.5em;
@@ -158,6 +158,86 @@ main {
 .qui-text .community {
   color: #dc4973;
   font-weight: 700;
+}
+
+/* Services blocks */
+.services-container {
+  display: flex;
+  gap: 2.5em;
+  flex-wrap: nowrap;
+  margin-top: 1em;
+  justify-content: flex-start;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.services-admin {
+  background: #bdbbc6;
+  border-radius: 24px;
+  padding: 2em 2.6em 1.1em 2.6em;
+  flex: 1 1 670px;
+  min-width: 350px;
+  max-width: 700px;
+  min-height: 320px;
+  margin-bottom: 1em;
+  box-shadow: 0 0 8px #e0d8c8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.services-community {
+  background: #c8a9ac;
+  border-radius: 24px;
+  padding: 2em 2.6em 1.1em 2.6em;
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 370px;
+  min-height: 320px;
+  margin-bottom: 1em;
+  box-shadow: 0 0 8px #e0d8c8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.services-admin h4, .services-community h4 {
+  margin-top: 0;
+  color: #3d3d3d;
+  font-size: 1.24em;
+  font-weight: 700;
+}
+.services-admin ul, .services-community ul {
+  padding-left: 0;
+  margin: 0.7em 0 0.2em 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 2.5em;
+}
+.services-community ul {
+  columns: 1;
+}
+.services-admin ul li,
+.services-community ul li {
+  margin-bottom: 0.45em;
+}
+.cta {
+  background: #6e8f8c;
+  color: #fff;
+  border: none;
+  padding: 0.8em 0;
+  border-radius: 12px;
+  font-size: 1.05em;
+  margin-top: 1.4em;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #c1d5c9;
+  text-align: center;
+  letter-spacing: .01em;
+}
+.cta:hover {
+  background: #55716f;
 }
 
 /* Footer */
@@ -235,10 +315,16 @@ footer {
     width: 130px;
     height: 130px;
   }
+  .services-admin, .services-community {
+    min-width: 300px;
+    max-width: 98vw;
+    padding: 1em 1vw;
+  }
 }
 
 @media (max-width: 900px) {
-  .qui-flex {
+  .qui-flex,
+  .services-container {
     flex-direction: column;
     gap: 1em;
     align-items: stretch;
@@ -258,6 +344,30 @@ footer {
   .qui-text h3 {
     font-size: 1.2em;
   }
+  .logo,
+  .logo-large {
+    width: 22vw;
+    max-width: 90px;
+  }
+  .footer-logo {
+    width: 36px;
+  }
+  .footer-social img {
+    width: 18px;
+  }
+  .footer-contact img {
+    width: 13px;
+  }
+  .services-admin, .services-community {
+    min-width: 220px;
+    max-width: 99vw;
+    padding: 0.7em 1vw;
+    min-height: 210px;
+  }
+  .services-admin ul,
+  .services-community ul {
+    columns: 1;
+  }
 }
 
 @media (max-width: 600px) {
@@ -273,6 +383,9 @@ footer {
     font-size: 0.9em;
   }
   .qui-container {
+    padding: 0.7em 0.3em;
+  }
+  .services-admin, .services-community {
     padding: 0.7em 0.3em;
   }
 }
