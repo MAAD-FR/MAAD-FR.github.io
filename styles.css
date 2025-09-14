@@ -86,14 +86,12 @@ h2 {
 main {
   max-width: 1100px;
   width: 98vw;
-  margin: 1em auto;
-  padding: 1em 2em;
-  background: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
 }
-
-/* .qui-container remains unchanged */
 .qui-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -102,8 +100,6 @@ main {
   box-shadow: none;
   padding: 2em 2em;
 }
-
-/* Qui suis-je layout */
 .qui-flex {
   display: flex;
   gap: 2.5em;
@@ -139,8 +135,6 @@ main {
   background: #e0e0e0;
   max-width: 100%;
 }
-
-/* Highlight styles in qui suis-je */
 .qui-text strong {
   font-weight: 700;
   color: #222;
@@ -166,8 +160,8 @@ main {
   flex-wrap: nowrap;
   margin-top: 1em;
   justify-content: flex-start;
-  background: none !important;
-  box-shadow: none !important;
+  background: none;
+  box-shadow: none;
 }
 
 .services-admin {
