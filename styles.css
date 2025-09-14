@@ -286,9 +286,12 @@ main {
   column-gap: 2.5em;
 }
 
-.services-community ul { columns: 1; }
+.services-community ul {
+  columns: 1;
+}
 
-.services-admin ul li, .services-community ul li {
+.services-admin ul li,
+.services-community ul li {
   margin-bottom: 0.45em;
 }
 .services-admin p,
@@ -312,8 +315,9 @@ main {
   text-align: center;
   letter-spacing: .01em;
 }
-
-.cta:hover { background: #55716f; }
+.cta:hover {
+  background: #55716f;
+}
 
 /* ------------------ Footer ------------------ */
 footer {
@@ -329,39 +333,35 @@ footer {
   left: 0; right: 0; bottom: 0;
   z-index: 1000;
 }
-
 .footer-left {
   display: flex;
   align-items: center;
   gap: 0.6em;
 }
-
 .footer-left span {
   font-weight: 600;
   color: #3d3d3d;
 }
-
 .footer-logo {
   width: 60px;
   border-radius: 50%;
 }
-
 .footer-center {
   display: flex;
   gap: 1.2em;
   justify-content: center;
 }
-
 .footer-center img {
   width: 44px;
   filter: grayscale(30%);
   transition: filter 0.2s;
 }
-
-.footer-center img:hover { filter: none; }
-
-.footer-right { text-align: right; }
-
+.footer-center img:hover {
+  filter: none;
+}
+.footer-right {
+  text-align: right;
+}
 .footer-right a {
   color: #3d3d3d;
   margin: 0 5px;
@@ -370,18 +370,40 @@ footer {
 
 /* ------------------ Responsive ------------------ */
 @media (max-width: 1200px) {
-  main { max-width: 98vw; padding: 0 1em 2em 1em; }
-  .qui-container { max-width: 98vw; padding: 1em 1vw; }
-  .qui-img { width: 200px; height: 200px; }
+  main {
+    max-width: 98vw;
+    padding: 0 1em 2em 1em;
+  }
+  .qui-container {
+    max-width: 98vw;
+    padding: 1em 1vw;
+  }
+  .qui-img {
+    width: 200px;
+    height: 200px;
+  }
   .services-admin, .services-community {
-    min-width: 300px; max-width: 98vw; padding: 1em 1vw;
+    min-width: 300px;
+    max-width: 98vw;
+    padding: 1em 1vw;
   }
 }
 
 @media (max-width: 900px) {
-  .horizontal-nav { position: static; justify-content: center; margin-bottom: 0.5em; }
-  header { padding-top: 1em; }
-  main { width: 100%; padding: 0 1rem 2.5rem 1rem; }
+  .horizontal-nav {
+    position: static;
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+  header {
+    padding-top: 1em;
+  }
+
+  main {
+    width: 100%;
+    padding: 0 1rem 2.5rem 1rem;
+  }
+
   .qui-container,
   .services-admin,
   .services-community {
@@ -392,13 +414,17 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+
   .qui-flex { flex-direction: column; gap: 1em; align-items: center; }
   .qui-photo { justify-content: center; margin-left: 0; }
   .qui-img { width: 200px; height: 200px; margin: 0 auto; }
+
   .services-container { flex-wrap: wrap; width: 100%; }
+
   .logo, .logo-large { width: 22vw; max-width: 90px; }
   .footer-logo { width: 36px; }
   .footer-center img { width: 30px; }
+
   .services-admin, .services-community {
     min-width: 220px;
     max-width: 99vw;
@@ -423,7 +449,6 @@ footer {
   margin: 0.8em 0 0.4em 0;
   color: #3d3d3d;
 }
-
 .contact-intro { margin: 0 0 1.2rem; line-height: 1.6; color: #3d3d3d; }
 
 #contactForm label {
@@ -432,7 +457,6 @@ footer {
   margin: 0.7rem 0 0.35rem 0;
   color: #3d3d3d;
 }
-
 #contactForm input[type="text"],
 #contactForm input[type="email"],
 #contactForm textarea {
@@ -447,7 +471,6 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05) inset;
 }
 #contactForm textarea { resize: vertical; }
-
 #contactForm input:focus,
 #contactForm textarea:focus {
   border-color: #cdbfa2;
@@ -456,6 +479,14 @@ footer {
 
 .checkline { display: inline-flex; align-items: center; gap: 0.45rem; margin: 0.8rem 0 1rem 0; font-size: 0.98em; }
 
+.contact-form p { margin: 0 0 1rem; line-height: 1.6; }
+
+/* desktop layout tweak: move the right card slightly right */
+@media (min-width: 901px) {
+  .contact-form { flex: 1 1 61%; margin-right: 1.6rem; }
+  .qui-photo    { flex: 1 1 39%; padding-left: 0.6rem; }
+}
+
 .contact-card { text-align: center; margin-top: 0.9rem; }
 .contact-name { font-size: 1.15em; margin-bottom: 1rem; }
 .contact-sub { font-size: 0.85em; color: #3d3d3d; margin-bottom: 0.5rem; }
@@ -463,29 +494,36 @@ footer {
 .contact-phone { text-decoration: none; color: #3d3d3d; }
 .contact-phone:hover { text-decoration: underline; }
 
+/* icon + text in one row (works if you wrapped each in .contact-line) */
 .contact-line {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
-  margin-bottom: 0.8rem;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
 }
 .contact-line img.contact-icon {
   width: 35px;
   height: 35px;
+  display: block;
+  filter: grayscale(30%);
 }
 
-/* adjustments desktop */
-@media (min-width: 901px) {
-  .contact-form { flex: 1 1 62%; margin-right: 1.2rem; }
-  .qui-photo    { flex: 1 1 38%; }
+/* support for the alternative grid wrapper (.contact-rows) if you used it */
+.contact-rows {
+  display: grid;
+  grid-template-columns: 35px auto;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  row-gap: 0.9rem;
+  margin-bottom: 1rem;
 }
+.contact-card .contact-icon { width: 35px; height: 35px; }
 
-/* smaller icons on mobile */
+/* mobile icon size */
 @media (max-width: 900px) {
   .contact-form { max-width: 100%; }
-  .contact-line img.contact-icon {
-    width: 24px;
-    height: 24px;
-  }
+  .contact-line img.contact-icon,
+  .contact-card .contact-icon { width: 24px; height: 24px; }
 }
