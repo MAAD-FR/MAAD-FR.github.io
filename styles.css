@@ -95,7 +95,7 @@ main {
 .qui-container {
   max-width: 1100px;
   margin: 0 auto 3em auto;
-  background: #fff6d1;
+  background: #f6e5d6;
   border-radius: 24px;
   box-shadow: none;
   padding: 0 2em 2em 2em;
@@ -160,7 +160,7 @@ main {
   flex-wrap: nowrap;
   margin-top: 1em;
   justify-content: flex-start;
-  background: #fff6d1;
+  background: none;
   box-shadow: none;
 }
 
