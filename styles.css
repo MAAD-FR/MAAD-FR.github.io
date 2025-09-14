@@ -467,19 +467,39 @@ footer {
   box-shadow: 0 0 0 3px rgba(205,191,162,0.25);
 }
 
-.checkline { display: inline-flex; align-items: center; gap: 0.45rem; margin: 0.8rem 0 1rem 0; font-size: 0.98em; }
-
-.contact-card { text-align: center; margin-top: 0.9rem; }
-.contact-name { font-size: 1.15em; }
-.contact-sub { font-size: 0.85em; color: #3d3d3d; }
-.contact-label { margin-top: 0.9rem; font-weight: 700; color: #3d3d3d; }
-.contact-phone { text-decoration: none; color: #3d3d3d; }
-.contact-phone:hover { text-decoration: underline; }
-
-/* Keep paragraph rhythm consistent inside form intro */
-.contact-form p { margin: 0 0 1rem; line-height: 1.6; }
-
-/* Mobile: stack nicely */
-@media (max-width: 900px) {
-  .contact-form { max-width: 100%; }
+.checkline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0.8rem 0 1rem 0;
+  font-size: 0.98em;
 }
+
+/* --- Right sidebar: photo + info card (updated) --- */
+.contact-card {
+  text-align: center;
+  margin-top: 0.9rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center the grid under the photo */
+}
+
+.contact-name {
+  font-size: 1.15em;
+  margin-bottom: 1rem;   /* empty line after name */
+}
+
+.contact-sub {
+  font-size: 0.85em;
+  color: #3d3d3d;
+}
+
+.contact-label {
+  margin-top: 1rem;      /* space before "Contactez-moi :" */
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  color: #3d3d3d;
+}
+
+/* Icons/text gr*
