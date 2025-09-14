@@ -4,40 +4,26 @@
   <meta charset="UTF-8">
   <title>M.A.A.D - Qui suis-je ?</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="include.js" defer></script>
 </head>
 <body>
-  <nav class="horizontal-nav">
-    <a href="index.html" class="nav-btn">Accueil</a>
-    <a href="services.html" class="nav-btn">Services</a>
-    <a href="contact.html" class="nav-btn">Contact</a>
-  </nav>
-  <header>
-    <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="logo">
-    <h1>M.A.A.D</h1>
-    <h2>Marie Assistante Admin & Digitale</h2>
-  </header>
+  <div data-include="header.html"></div>
+
   <main>
-    <!-- Container is back, but now invisible (same as background, no shadow, no border) -->
     <div class="qui-container">
       <section class="qui-flex">
         <div class="qui-text">
           <h3>Qui suis-je&nbsp;?</h3>
-          <p>
-            Je m’appelle Marie, assistante administrative et commerciale indépendante et <span class="community">community</span> manager.<br>
-            Organisée, rigoureuse et passionnée par le digital, j’accompagne les artisans et les restaurateurs dans la gestion de leur quotidien et le développement de leur visibilité en ligne.
-          </p>
-          <p>
-            Maman, rêveuse et toujours curieuse, j’aime apporter des solutions simples, modernes et efficaces.
-          </p>
-          <p>
-            <strong>Mon objectif&nbsp;:</strong> vous faire gagner du temps pour que vous puissiez vous concentrer sur l’essentiel, <strong>votre métier.</strong>
-          </p>
-          <p>
-            Honnête et à l’écoute, je m’adapte à vos besoins pour créer un accompagnement sur mesure, que ce soit pour vos tâches administratives, vos réseaux sociaux ou vos projets de digitalisation.
-          </p>
-          <p class="en-bref">
-            👉 <strong>En bref, je suis votre partenaire de confiance pour vous libérer l’esprit et booster votre activité&nbsp;!</strong>
-          </p>
+          <p>Je m’appelle Marie, assistante administrative et commerciale indépendante et community manager.
+          Organisée, rigoureuse et passionnée par le digital, j’accompagne les artisans et les restaurateurs dans la gestion de leur quotidien et le développement de leur visibilité en ligne.</p>
+
+          <p>Maman, rêveuse et toujours curieuse, j’aime apporter des solutions simples, modernes et efficaces.</p>
+
+          <p><strong>Mon objectif&nbsp;:</strong> vous faire gagner du temps pour que vous puissiez vous concentrer sur l’essentiel, <strong>votre métier.</strong></p>
+
+          <p>Honnête et à l’écoute, je m’adapte à vos besoins pour créer un accompagnement sur mesure, que ce soit pour vos tâches administratives, vos réseaux sociaux ou vos projets de digitalisation.</p>
+
+          <p class="en-bref">👉 <strong>En bref, je suis votre partenaire de confiance pour vous libérer l’esprit et booster votre activité&nbsp;!</strong></p>
         </div>
         <div class="qui-photo">
           <img src="Portrait.jpg" alt="Portrait de Marie" class="qui-img">
@@ -45,26 +31,7 @@
       </section>
     </div>
   </main>
-<footer>
-  <div class="footer-left">
-    <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="footer-logo">
-    <span>&copy; 2025 M.A.A.D</span>
-  </div>
-  <div class="footer-center footer-social">
-    <a href="#" title="Instagram">
-      <img src="icons8-instagram-100.png" alt="Instagram">
-    </a>
-    <a href="#" title="LinkedIn">
-      <img src="icons8-linkedin-100.png" alt="LinkedIn">
-    </a>
-    <a href="#" title="Facebook">
-      <img src="icons8-facebook-100.png" alt="Facebook">
-    </a>
-  </div>
-  <div class="footer-right">
-    <a href="#">Terms of Service</a> | 
-    <a href="#">Privacy Policy</a>
-  </div>
-</footer>
+
+  <div data-include="footer.html"></div>
 </body>
 </html>
