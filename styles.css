@@ -1,37 +1,57 @@
-/* ------------------ Global / Base ------------------ */
+/* ------------------ Tiny CSS Reset ------------------ */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ------------------ Base Layout ------------------ */
 html {
   height: 100%;
-  font-size: 90%;            /* shrink everything ~10% */
+  font-size: 90%;   /* shrink everything ~10% */
 }
 
 body {
   height: 100%;
-  margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
   background: #f8eedc;
   color: #333;
 
-  /* Layout for fixed footer spacing */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-bottom: var(--footer-h, 100px);  /* leave space for fixed footer */
+
+  /* leave space for fixed footer */
+  padding-bottom: var(--footer-h, 100px);
 }
 
-/* Avoid any horizontal scroll */
-html, body { overflow-x: hidden; }
-img, video { max-width: 100%; height: auto; }
+/* prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+}
 
-/* Footer height variable (tweak if needed) */
+/* footer height variable */
 :root { --footer-h: 100px; }
 @media (max-width: 900px) { :root { --footer-h: 90px; } }
 @media (max-width: 600px) { :root { --footer-h: 84px; } }
 
-/* ------------------ Header / Hero ------------------ */
+/* ------------------ Header ------------------ */
 header {
   text-align: center;
   padding: 1em 0 0 0;
@@ -43,6 +63,7 @@ header {
   border-radius: 50%;
   margin-bottom: 1em;
 }
+
 .logo-large {
   width: 260px;
   max-width: 40vw;
@@ -56,6 +77,7 @@ h1 {
   margin: 0.2em 0 0.1em 0;
   color: #3d3d3d;
 }
+
 h2 {
   font-size: 1.05em;
   font-weight: 400;
@@ -70,6 +92,7 @@ h2 {
   align-items: center;
   margin: 2em 0;
 }
+
 .vertical-nav .nav-btn {
   background: #f6e5d6;
   border: none;
@@ -83,7 +106,10 @@ h2 {
   text-decoration: none;
   color: #333;
 }
-.vertical-nav .nav-btn:hover { background: #e8d7c3; }
+
+.vertical-nav .nav-btn:hover {
+  background: #e8d7c3;
+}
 
 .horizontal-nav {
   position: absolute;
@@ -93,6 +119,7 @@ h2 {
   gap: 0.7em;
   z-index: 10;
 }
+
 .horizontal-nav .nav-btn {
   background: #f6e5d6;
   border: none;
@@ -105,20 +132,24 @@ h2 {
   text-decoration: none;
   color: #333;
 }
-.horizontal-nav .nav-btn:hover { background: #e8d7c3; }
 
-/* ------------------ Main / Sections ------------------ */
+.horizontal-nav .nav-btn:hover {
+  background: #e8d7c3;
+}
+
+/* ------------------ Main ------------------ */
 main {
-  flex: 1 0 auto;                 /* fill between header & footer */
+  flex: 1 0 auto;
   max-width: 1100px;
-  width: 100%;                    /* use full container width (no 98vw overflow) */
+  width: 100%;
   margin: 0 auto 3em auto;
-  padding: 0 2em 2em 2em;         /* comfy desktop padding */
+  padding: 0 2em 2em 2em;
   background: none;
   border-radius: 0;
   box-shadow: none;
 }
 
+/* ------------------ Qui Page ------------------ */
 .qui-container {
   max-width: 1100px;
   margin: 0 auto 3em auto;
@@ -127,6 +158,7 @@ main {
   box-shadow: none;
   padding: 0 2em 2em 2em;
 }
+
 .qui-flex {
   display: flex;
   gap: 2.5em;
@@ -134,6 +166,7 @@ main {
   justify-content: space-between;
   min-height: 320px;
 }
+
 .qui-text {
   flex: 1 1 78%;
   font-size: 1.08em;
@@ -141,13 +174,13 @@ main {
   max-width: 74vw;
   margin-right: 2em;
 }
+
 .qui-text h3 {
   font-size: 2.2em;
   font-weight: 700;
   margin-bottom: 0.5em;
 }
 
-/* Qui page photo block */
 .qui-photo {
   flex: 1 1 22%;
   display: flex;
@@ -155,6 +188,7 @@ main {
   justify-content: flex-start;
   margin-left: 0.5em;
 }
+
 .qui-img {
   width: 200px;
   height: 200px;
@@ -163,11 +197,14 @@ main {
   box-shadow: 0 0 20px #ece4d0;
   background: #e0e0e0;
   max-width: 100%;
-  display: block;
-  margin: 0;                      /* desktop keeps alignment from .qui-photo */
 }
 
-.qui-text strong { font-weight: 700; color: #222; }
+/* ------------------ Text Styles ------------------ */
+.qui-text strong {
+  font-weight: 700;
+  color: #222;
+}
+
 .qui-text .en-bref {
   background: none;
   color: #222;
@@ -177,9 +214,13 @@ main {
   display: flex;
   align-items: center;
 }
-.qui-text .community { color: #dc4973; font-weight: 700; }
 
-/* ------------------ Services blocks ------------------ */
+.qui-text .community {
+  color: #dc4973;
+  font-weight: 700;
+}
+
+/* ------------------ Services ------------------ */
 .services-container {
   display: flex;
   gap: 2.5em;
@@ -189,6 +230,7 @@ main {
   background: none;
   box-shadow: none;
 }
+
 .services-admin {
   background: #bdbbc6;
   border-radius: 24px;
@@ -203,6 +245,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .services-community {
   background: #c8a9ac;
   border-radius: 24px;
@@ -217,12 +260,14 @@ main {
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .services-admin h4, .services-community h4 {
   margin-top: 0;
   color: #3d3d3d;
   font-size: 1.24em;
   font-weight: 700;
 }
+
 .services-admin ul, .services-community ul {
   padding-left: 0;
   margin: 0.7em 0 0.2em 0;
@@ -230,8 +275,12 @@ main {
   columns: 2;
   column-gap: 2.5em;
 }
+
 .services-community ul { columns: 1; }
-.services-admin ul li, .services-community ul li { margin-bottom: 0.45em; }
+
+.services-admin ul li, .services-community ul li {
+  margin-bottom: 0.45em;
+}
 
 .cta {
   background: #6e8f8c;
@@ -248,9 +297,10 @@ main {
   text-align: center;
   letter-spacing: .01em;
 }
+
 .cta:hover { background: #55716f; }
 
-/* ------------------ Fixed Footer ------------------ */
+/* ------------------ Footer ------------------ */
 footer {
   background: #f8eedc;
   border-top: 1px solid #e0d8c8;
@@ -266,16 +316,43 @@ footer {
   z-index: 1000;
 }
 
-.footer-left { display: flex; align-items: center; gap: 0.6em; }
-.footer-left span { font-weight: 600; color: #3d3d3d; }
-.footer-logo { width: 60px; border-radius: 50%; }
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
 
-.footer-center { display: flex; gap: 1.2em; justify-content: center; }
-.footer-center img { width: 44px; filter: grayscale(30%); transition: filter 0.2s; }
+.footer-left span {
+  font-weight: 600;
+  color: #3d3d3d;
+}
+
+.footer-logo {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.footer-center {
+  display: flex;
+  gap: 1.2em;
+  justify-content: center;
+}
+
+.footer-center img {
+  width: 44px;
+  filter: grayscale(30%);
+  transition: filter 0.2s;
+}
+
 .footer-center img:hover { filter: none; }
 
 .footer-right { text-align: right; }
-.footer-right a { color: #3d3d3d; margin: 0 5px; text-decoration: underline dotted; }
+
+.footer-right a {
+  color: #3d3d3d;
+  margin: 0 5px;
+  text-decoration: underline dotted;
+}
 
 /* ------------------ Responsive ------------------ */
 @media (max-width: 1200px) {
@@ -288,11 +365,10 @@ footer {
 }
 
 @media (max-width: 900px) {
-  /* Keep menu above logo */
+  /* Nav stays above logo */
   .horizontal-nav { position: static; justify-content: center; margin-bottom: 0.5em; }
   header { padding-top: 1em; }
 
-  /* No horizontal overflow & comfy side padding */
   main { width: 100%; padding: 0 1rem 2.5rem 1rem; }
 
   .qui-container,
@@ -300,16 +376,16 @@ footer {
   .services-community {
     max-width: 100%;
     width: 100%;
-    min-width: 0;              /* kill desktop min-widths */
-    padding: 1rem;             /* side margin like desktop feel */
+    min-width: 0;
+    padding: 1rem;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* Center the photo on mobile and make it bigger (200x200) */
+  /* Qui photo centered & larger */
   .qui-flex { flex-direction: column; gap: 1em; align-items: center; }
   .qui-photo { justify-content: center; margin-left: 0; }
-  .qui-img { width: 200px; height: 200px; display: block; margin: 0 auto; }
+  .qui-img { width: 200px; height: 200px; margin: 0 auto; }
 
   .services-container { flex-wrap: wrap; width: 100%; }
 
@@ -323,6 +399,7 @@ footer {
     padding: 0.7em 1vw;
     min-height: 210px;
   }
+
   .services-admin ul, .services-community ul { columns: 1; }
 }
 
