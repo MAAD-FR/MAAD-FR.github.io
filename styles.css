@@ -428,28 +428,8 @@ footer {
 
   .footer-left span, .footer-right, .footer-center { font-size: 0.9em; }
 }
+
 /* ---------- Contact page ---------- */
-.contact-container {
-  max-width: 1100px;
-  margin: 0 auto 3em auto;
-  background: #f6e5d6;              /* same as .qui-container */
-  border-radius: 24px;
-  padding: 0 2em 2em 2em;
-}
-
-.contact-flex {
-  display: flex;
-  gap: 2.5em;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 320px;
-}
-
-.contact-form {
-  flex: 1 1 68%;
-  max-width: 740px;
-}
-
 .contact-form h3 {
   font-size: 2.2em;
   font-weight: 700;
@@ -457,13 +437,8 @@ footer {
   color: #3d3d3d;
 }
 
-.contact-intro {
-  margin: 0 0 1.2rem 0;
-  line-height: 1.6;
-  color: #3d3d3d;
-}
+.contact-intro { margin: 0 0 1.2rem; line-height: 1.6; color: #3d3d3d; }
 
-/* fields */
 #contactForm label {
   display: block;
   font-weight: 600;
@@ -475,7 +450,7 @@ footer {
 #contactForm input[type="email"],
 #contactForm textarea {
   width: 100%;
-  background: #f8eedc;             /* soft sand tone */
+  background: #f8eedc;
   border: 1px solid #eadfc8;
   border-radius: 10px;
   padding: 0.75rem 0.9rem;
@@ -484,76 +459,27 @@ footer {
   outline: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05) inset;
 }
-
 #contactForm textarea { resize: vertical; }
 
 #contactForm input:focus,
 #contactForm textarea:focus {
   border-color: #cdbfa2;
-  box-shadow: 0 0 0 3px rgba(205, 191, 162, 0.25);
+  box-shadow: 0 0 0 3px rgba(205,191,162,0.25);
 }
 
-.checkline {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin: 0.8rem 0 1rem 0;
-  font-size: 0.98em;
-}
+.checkline { display: inline-flex; align-items: center; gap: 0.45rem; margin: 0.8rem 0 1rem 0; font-size: 0.98em; }
 
-/* reuse .cta button style already in your CSS */
-
-/* Right side: photo + card */
-.contact-side {
-  flex: 1 1 32%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;          /* vertically centered vs form */
-  text-align: center;
-}
-
-.contact-photo {
-  width: 200px;                     /* same as .qui-img */
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 20px #ece4d0;
-  background: #e0e0e0;
-  margin: 0 auto 0.9rem;
-}
-
-.contact-card p { margin: 0.25rem 0; }
-
-.contact-name {
-  font-size: 1.15em;                /* slightly bigger than body */
-}
-
-.contact-sub {
-  font-size: 0.85em;                /* half-size smaller than name */
-  color: #3d3d3d;
-}
-
-.contact-label {
-  margin-top: 0.9rem;
-  font-weight: 700;
-  color: #3d3d3d;
-}
-
-.contact-phone {
-  text-decoration: none;
-  color: #3d3d3d;
-}
+.contact-card { text-align: center; margin-top: 0.9rem; }
+.contact-name { font-size: 1.15em; }
+.contact-sub { font-size: 0.85em; color: #3d3d3d; }
+.contact-label { margin-top: 0.9rem; font-weight: 700; color: #3d3d3d; }
+.contact-phone { text-decoration: none; color: #3d3d3d; }
 .contact-phone:hover { text-decoration: underline; }
 
-/* Paragraph rhythm inside the left text (like Qui) */
+/* Keep paragraph rhythm consistent inside form intro */
 .contact-form p { margin: 0 0 1rem; line-height: 1.6; }
 
-/* Responsive */
+/* Mobile: stack nicely */
 @media (max-width: 900px) {
-  .contact-flex { flex-direction: column; gap: 1.2em; align-items: stretch; }
   .contact-form { max-width: 100%; }
-  .contact-container { padding: 1rem; }
-  .contact-side { order: 2; margin-top: 0.5rem; }
 }
-
