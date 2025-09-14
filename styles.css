@@ -87,7 +87,7 @@ main {
   max-width: 1100px;
   width: 98vw;
   margin: 0 auto 3em auto;
-  padding: 0 2em 2em 2em ;
+  padding: 0 2em 2em 2em;
   background: none;
   border-radius: 0;
   box-shadow: none;
@@ -194,13 +194,15 @@ main {
   justify-content: flex-start;
 }
 
-.services-admin h4, .services-community h4 {
+.services-admin h4,
+.services-community h4 {
   margin-top: 0;
   color: #3d3d3d;
   font-size: 1.24em;
   font-weight: 700;
 }
-.services-admin ul, .services-community ul {
+.services-admin ul,
+.services-community ul {
   padding-left: 0;
   margin: 0.7em 0 0.2em 0;
   list-style: none;
@@ -237,7 +239,7 @@ main {
 footer {
   background: #f8eedc;
   border-top: 1px solid #e0d8c8;
-  padding: 1em 1em;   /* reduced height */
+  padding: 1em 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -263,7 +265,7 @@ footer {
   justify-content: center;
 }
 .footer-center img {
-  width: 44px; /* doubled */
+  width: 44px;
   filter: grayscale(30%);
   transition: filter 0.2s;
 }
@@ -293,7 +295,8 @@ footer {
     width: 130px;
     height: 130px;
   }
-  .services-admin, .services-community {
+  .services-admin,
+  .services-community {
     min-width: 300px;
     max-width: 98vw;
     padding: 1em 1vw;
@@ -331,9 +334,10 @@ footer {
     width: 36px;
   }
   .footer-center img {
-    width: 30px; /* smaller on mobile */
+    width: 30px;
   }
-  .services-admin, .services-community {
+  .services-admin,
+  .services-community {
     min-width: 220px;
     max-width: 99vw;
     padding: 0.7em 1vw;
@@ -342,6 +346,17 @@ footer {
   .services-admin ul,
   .services-community ul {
     columns: 1;
+  }
+
+  /* Correction du chevauchement menu/logo */
+  .horizontal-nav {
+    position: static;
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+
+  header {
+    padding-top: 1em;
   }
 }
 
@@ -360,7 +375,8 @@ footer {
   .qui-container {
     padding: 0.7em 0.3em;
   }
-  .services-admin, .services-community {
+  .services-admin,
+  .services-community {
     padding: 0.7em 0.3em;
   }
 }
