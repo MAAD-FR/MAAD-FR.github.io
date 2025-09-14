@@ -1,5 +1,9 @@
-/* ---------- Layout base (keeps footer text off the page when short) ---------- */
-html, body {
+html {
+  height: 100%;
+  font-size: 90%;
+}
+
+body {
   height: 100%;
   margin: 0;
 }
