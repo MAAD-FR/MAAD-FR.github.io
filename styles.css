@@ -83,22 +83,21 @@ h2 {
   background: #e8d7c3;
 }
 
-/* Main content area */
 main {
   max-width: 1100px;
   width: 98vw;
-  margin: 0.5em auto; /* brings services higher */
+  margin: 1em auto;
   padding: 1em 2em;
   background: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
 
-/* Qui page container (ONLY for qui.html) */
+/* .qui-container remains unchanged */
 .qui-container {
   max-width: 1100px;
   margin: 0 auto;
-  background: #f8eedc; /* same as body */
+  background: #f8eedc;
   border-radius: 24px;
   box-shadow: none;
   padding: 2em 2em;
