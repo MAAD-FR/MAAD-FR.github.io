@@ -1,70 +1,86 @@
-<main>
-  <div class="contact-container">
-    <section class="contact-flex">
-      <!-- Left: form -->
-      <div class="contact-form">
-        <h3>Contactez-moi</h3>
-        <p class="contact-intro">
-          N’hésitez pas à me contacter pour toute question ou demande de rendez-vous.
-          Je suis là pour vous aider et répondre à vos besoins.
-        </p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>M.A.A.D - Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="include.js" defer></script>
+</head>
+<body>
+  <!-- Shared header -->
+  <div data-include="header.html"></div>
 
-        <form id="contactForm">
-          <label for="name">Nom *</label>
-          <input type="text" id="name" name="name" required>
+  <main>
+    <!-- Reuse the same visual shell as "Qui suis-je ?" -->
+    <div class="qui-container">
+      <section class="qui-flex">
+        <!-- Left column: form -->
+        <div class="contact-form">
+          <h3>Contactez-moi</h3>
+          <p class="contact-intro">
+            N’hésitez pas à me contacter pour toute question ou demande de rendez-vous.
+            Je suis là pour vous aider et répondre à vos besoins.
+          </p>
 
-          <label for="email">Adresse e-mail *</label>
-          <input type="email" id="email" name="email" required>
+          <form id="contactForm">
+            <label for="name">Nom *</label>
+            <input type="text" id="name" name="name" required />
 
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
+            <label for="email">Adresse e-mail *</label>
+            <input type="email" id="email" name="email" required />
 
-          <label class="checkline">
-            <input type="checkbox" id="copyMe">
-            Recevoir une copie
-          </label>
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
 
-          <button type="submit" class="cta">Envoyer le formulaire</button>
-        </form>
-      </div>
+            <label class="checkline">
+              <input type="checkbox" id="copyMe" />
+              Recevoir une copie
+            </label>
 
-      <!-- Right: photo + contact block -->
-      <aside class="contact-side">
-        <img src="Portrait.jpg" alt="Portrait de Marie" class="contact-photo">
-        <div class="contact-card">
-          <p class="contact-name"><em><strong>Marie Blanco Gimet</strong></em></p>
-          <p class="contact-sub">Domiciliée à Ondes, 31330</p>
-          <p class="contact-sub">À distance partout en France</p>
-
-          <p class="contact-label">Contactez-moi :</p>
-          <p><a href="mailto:marie.blancogimet@outlook.fr">marie.blancogimet@outlook.fr</a></p>
-          <p><a class="contact-phone" href="tel:+33670432952"><strong>06 70 43 29 52</strong></a></p>
+            <button type="submit" class="cta">Envoyer le formulaire</button>
+          </form>
         </div>
-      </aside>
-    </section>
-  </div>
-</main>
 
-<!-- Mailto submit (no backend needed) -->
-<script>
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const copy = document.getElementById('copyMe').checked;
+        <!-- Right column: photo + info -->
+        <aside class="qui-photo">
+          <div>
+            <img src="Portrait.jpg" alt="Portrait de Marie" class="qui-img" />
+            <div class="contact-card">
+              <p class="contact-name"><em><strong>Marie Blanco Gimet</strong></em></p>
+              <p class="contact-sub">Domiciliée à Ondes, 31330</p>
+              <p class="contact-sub">À distance partout en France</p>
 
-    const to = 'marie.blancogimet@outlook.fr';
-    const subject = encodeURIComponent('Nouveau message depuis le site M.A.A.D');
-    const body = encodeURIComponent(
-      `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`
-    );
+              <p class="contact-label">Contactez-moi :</p>
+              <p><a href="mailto:marie.blancogimet@outlook.fr">marie.blancogimet@outlook.fr</a></p>
+              <p><a class="contact-phone" href="tel:+33670432952"><strong>06 70 43 29 52</strong></a></p>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
 
-    let mailto = `mailto:${to}?subject=${subject}&body=${body}`;
-    if (copy && email) {
-      // Some mail clients support cc= in mailto
-      mailto += `&cc=${encodeURIComponent(email)}`;
-    }
-    window.location.href = mailto;
-  });
-</script>
+  <!-- Shared footer -->
+  <div data-include="footer.html"></div>
+
+  <!-- Mailto submit -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const copy = document.getElementById('copyMe').checked;
+
+      const to = 'marie.blancogimet@outlook.fr';
+      const subject = encodeURIComponent('Nouveau message depuis le site M.A.A.D');
+      const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`);
+
+      let mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+      if (copy && email) mailto += `&cc=${encodeURIComponent(email)}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
