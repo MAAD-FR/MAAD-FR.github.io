@@ -4,18 +4,11 @@
   <meta charset="UTF-8">
   <title>M.A.A.D - Services</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="include.js" defer></script>
 </head>
 <body>
-  <nav class="horizontal-nav">
-    <a href="index.html" class="nav-btn">Accueil</a>
-    <a href="qui.html" class="nav-btn">Qui suis-je ?</a>
-    <a href="contact.html" class="nav-btn">Contact</a>
-  </nav>
-  <header>
-    <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="logo">
-    <h1>M.A.A.D</h1>
-    <h2>Marie Assistante Admin & Digitale</h2>
-  </header>
+  <div data-include="header.html"></div>
+
   <main>
     <div class="services-container">
       <div class="services-admin">
@@ -39,6 +32,7 @@
         </ul>
         <button class="cta">Bye bye le stress</button>
       </div>
+
       <div class="services-community">
         <h4>Community manager</h4>
         <p><strong>Forfait 600 €/mois – 3 post par semaine</strong></p>
@@ -53,27 +47,7 @@
       </div>
     </div>
   </main>
-<footer>
-  <div class="footer-left">
-    <img src="M.A.A.D.png" alt="Logo M.A.A.D" class="footer-logo">
-    <span>&copy; 2025 M.A.A.D</span>
-  </div>
-  <div class="footer-center footer-social">
-    <a href="#" title="Instagram">
-      <img src="icons8-instagram-100.png" alt="Instagram">
-    </a>
-    <a href="#" title="LinkedIn">
-      <img src="icons8-linkedin-100.png" alt="LinkedIn">
-    </a>
-    <a href="#" title="Facebook">
-      <img src="icons8-facebook-100.png" alt="Facebook">
-    </a>
-  </div>
-  <div class="footer-right">
-    <a href="#">Terms of Service</a> | 
-    <a href="#">Privacy Policy</a>
-  </div>
-</footer>
 
+  <div data-include="footer.html"></div>
 </body>
 </html>
