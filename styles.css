@@ -7,7 +7,7 @@ body {
 
 header {
   text-align: center;
-  padding: 2em 0 1em 0;
+  padding: 0.5em 0 1em 0;
 }
 
 .logo {
@@ -98,7 +98,7 @@ main {
   background: #f8eedc;
   border-radius: 24px;
   box-shadow: none;
-  padding: 2em 2em;
+  padding: 0.5em 2em;
 }
 .qui-flex {
   display: flex;
