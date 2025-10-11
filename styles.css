@@ -178,6 +178,7 @@ main {
   font-size: 2.2em;
   font-weight: 700;
   margin-bottom: 0.5em;
+  color: #6e8f8c;
 }
 .qui-text p {
   margin: 0 0 1rem;
@@ -532,7 +533,7 @@ footer {
 .section-title {
   font-size: 2.2em;
   font-weight: 700;
-  color: #55716f; /* teal accent within palette */
+  color: #6e8f8c;
   text-align: center;
   margin: 0.2em 0 0.3em 0;
 }
