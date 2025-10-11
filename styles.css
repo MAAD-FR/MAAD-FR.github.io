@@ -568,7 +568,7 @@ footer {
 .service-card h4 {
   margin-top: 0;
   font-size: 1.35em;
-  color: #3d3d3d;
+  color: #6e8f8c;
 }
 .service-card p { margin: 0 0 0.9em 0; line-height: 1.65; }
 
@@ -578,6 +578,7 @@ footer {
   width: auto;
   padding: 0.6em 1em;
   margin-top: 0.2em;
+  text-decoration: none;
 }
 
 /* Responsiveness for services landing */
