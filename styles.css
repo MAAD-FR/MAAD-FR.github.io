@@ -70,7 +70,23 @@ header {
   margin-bottom: 1em;
   margin-top: 1em;
 }
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9em;
+  margin-top: 0.4em;
+}
 
+.brand-text {
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    gap: 0.7em;
+  }
+}
 h1 {
   font-size: 2.3em;
   margin: 0.2em 0 0.1em 0;
