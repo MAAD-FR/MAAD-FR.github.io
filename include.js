@@ -20,7 +20,7 @@ function includeHTML() {
       .then(html => { el.innerHTML = html; })
       .catch(err => console.error('Include error:', err))
   );
-
+ 
   Promise.all(tasks).then(() => {
     // After header/footer are injected, compute footer height
     setFooterPadding();
