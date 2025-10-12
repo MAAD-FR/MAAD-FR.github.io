@@ -680,3 +680,10 @@ footer {
     padding: 1.5em;
   }
 }
+
+/* ------------------ Legal Pages ------------------ */
+.legal h3 { font-size: 2.0em; font-weight: 700; margin: 0.8em 0 0.5em 0; color: #3d3d3d; }
+.legal h4 { font-size: 1.2em; font-weight: 700; margin: 1.2em 0 0.4em 0; color: #3d3d3d; }
+.legal p { margin: 0 0 0.9rem 0; line-height: 1.6; color: #3d3d3d; }
+.legal ul { list-style: disc; padding-left: 1.2em; margin: 0 0 0.9rem 0; }
+.legal ol { list-style: decimal; padding-left: 1.3em; margin: 0 0 0.9rem 0; }
