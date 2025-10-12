@@ -668,6 +668,7 @@ footer {
   text-decoration: none;
   margin-top: 2em;
   transition: background 0.2s;
+  width: auto;
 }
 
 .service-nav-button:hover {
