@@ -658,6 +658,10 @@ footer {
 
 .service-nav-button {
   display: block;
+  align-self: center;
+  margin: 1.2em auto 2em;
+  width: fit-content;
+  max-width: 90vw;
   background: #6e8f8c;
   color: white;
   text-align: center;
@@ -666,9 +670,7 @@ footer {
   font-size: 1em;
   font-weight: 700;
   text-decoration: none;
-  margin-top: 2em;
   transition: background 0.2s;
-  width: auto;
 }
 
 .service-nav-button:hover {
