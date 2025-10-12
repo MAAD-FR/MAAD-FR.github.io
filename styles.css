@@ -338,21 +338,21 @@ main {
   background: #55716f;
 }
 
-/* Price text on Tarifs cards */
-.tarif-price {
-  margin: 0.5em 0 0.6em 0;
+/* Tarifs page pricing and note */
+.tarifs-pricing {
+  font-size: 1.05em;
   font-weight: 700;
   color: #3d3d3d;
-  font-family: 'Actor', 'Montserrat', Arial, sans-serif;
+  text-align: center;
+  margin: 1em 0 0.3em 0;
 }
 
-/* Helper note under each Tarifs card */
-.tarif-note {
-  margin-top: 2em;              /* ~2em gap below the card's CTA */
+.tarifs-note {
+  font-size: 0.85em;
+  color: #555;
   text-align: center;
-  color: #3d3d3d;
-  font-size: 1em;
-  font-family: 'Actor', 'Montserrat', Arial, sans-serif;
+  margin: 0.3em 0 0.5em 0;
+  font-style: italic;
 }
 
 /* ------------------ Footer ------------------ */
