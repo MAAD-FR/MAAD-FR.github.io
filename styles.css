@@ -238,7 +238,7 @@ main {
   display: flex;
   gap: 2.5em;
   flex-wrap: nowrap;
-  margin-top: 1em;
+  margin-top: 3em;
   justify-content: flex-start;
   background: none;
   box-shadow: none;
@@ -661,7 +661,7 @@ footer {
 .service-nav-button {
   display: block;
   align-self: center;
-  margin: 0.4em auto 2em 1.5em auto 2em;
+  margin: 0.4em auto 5em auto;
   width: fit-content;
   max-width: 90vw;
   background: #6e8f8c;
