@@ -29,7 +29,7 @@ html {
 
 body {
   height: 100%;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Actor', 'Montserrat', Arial, sans-serif;
   background: #f8eedc;
   color: #333;
   display: flex;
@@ -178,6 +178,7 @@ main {
   font-size: 2.2em;
   font-weight: 700;
   margin-bottom: 0.5em;
+  color: #6e8f8c;
 }
 .qui-text p {
   margin: 0 0 1rem;
@@ -526,4 +527,156 @@ footer {
   .contact-form { max-width: 100%; }
   .contact-line img.contact-icon,
   .contact-card .contact-icon { width: 24px; height: 24px; }
+}
+
+/* ------------------ Services Landing Page ------------------ */
+.section-title {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #6e8f8c;
+  text-align: center;
+  margin: 0.2em 0 0.3em 0;
+}
+.section-intro {
+  text-align: center;
+  color: #3d3d3d;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto 1.2em auto;
+}
+.service-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2em;
+  align-items: stretch;
+  margin: 1.5em 0 2em 0;
+}
+.service-row.reverse { grid-template-columns: 0.9fr 1.1fr; }
+.service-img img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 0 8px #e0d8c8;
+}
+.service-card {
+  background: #f8eedc;
+  border-radius: 16px;
+  box-shadow: 0 0 8px #e0d8c8;
+  padding: 1.2em 1.4em;
+  color: #3d3d3d;
+}
+.service-card h4 {
+  margin-top: 0;
+  font-size: 1.35em;
+  color: #6e8f8c;
+}
+.service-card p { margin: 0 0 0.9em 0; line-height: 1.65; }
+
+/* inline CTA variant (keeps existing .cta styles) */
+.cta.inline {
+  display: inline-block;
+  width: auto;
+  padding: 0.6em 1em;
+  margin-top: 0.2em;
+  text-decoration: none;
+}
+
+/* Responsiveness for services landing */
+@media (max-width: 1100px) {
+  .service-img img { height: 320px; }
+}
+@media (max-width: 900px) {
+  .service-row,
+  .service-row.reverse {
+    grid-template-columns: 1fr;
+  }
+  .service-row.reverse .service-img { order: 2; }
+  .service-row.reverse .service-card { order: 1; }
+}
+
+/* ------------------ Service Detail Pages ------------------ */
+.service-detail-container {
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 2em;
+  background: #f6e5d6;
+  border-radius: 24px;
+  font-family: 'Actor', sans-serif;
+}
+
+.service-detail-title {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #6e8f8c;
+  text-align: center;
+  margin: 0 0 1.5em 0;
+}
+
+.service-intro-text {
+  font-size: 0.95em;
+  line-height: 1.4;
+  margin: 0 0 0.8em 0;
+  color: #3d3d3d;
+}
+
+.service-table {
+  margin: 1.5em 0;
+  width: 100%;
+}
+
+.service-table-header-row {
+  background: #6e8f8c;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9em;
+  padding: 0.6em 1em;
+  text-align: center;
+  border-bottom: 1px solid #e0d8c8;
+  margin-top: 1em;
+}
+
+.service-table-row {
+  border-bottom: 1px solid #e0d8c8;
+}
+
+.service-table-cell {
+  padding: 0.6em 1em;
+  font-size: 0.9em;
+  line-height: 1.3;
+  color: #3d3d3d;
+  text-align: center;
+}
+
+.service-pricing {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #000;
+  text-align: right;
+  margin-top: 2em;
+}
+
+.service-nav-button {
+  display: block;
+  background: #6e8f8c;
+  color: white;
+  text-align: center;
+  padding: 0.8em 1.5em;
+  border-radius: 12px;
+  font-size: 1em;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 2em;
+  transition: background 0.2s;
+}
+
+.service-nav-button:hover {
+  background: #55716f;
+}
+
+/* Responsive for service detail pages */
+@media (max-width: 900px) {
+  .service-detail-container {
+    padding: 1.5em;
+  }
 }

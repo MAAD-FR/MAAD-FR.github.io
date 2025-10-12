@@ -5,47 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>M.A.A.D - Services</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet">
   <script src="include.js" defer></script>
 </head>
 <body>
   <div data-include="header.html"></div>
 
   <main>
-    <div class="services-container">
-      <div class="services-admin">
-        <h4>Gestion administrative et commerciale</h4>
-        <p><strong>40 € / heure</strong> &nbsp; <strong>245 € / jour</strong></p>
-        <ul>
-          <li>Organisation de vos agendas</li>
-          <li>Gestion du courrier et des mails</li>
-          <li>Mise en place de procédures</li>
-          <li>Assistance dans l’organisation de votre entreprise</li>
-          <li>Gestion des fournitures de bureau</li>
-          <li>Création et suivi devis et factures</li>
-          <li>Gestion des stocks et inventaire</li>
-          <li>Harmonisation de vos outils digitaux</li>
-          <li>Démarches administratives</li>
-          <li>Saisie et mise en page de vos présentations</li>
-          <li>Relance clients et fournisseurs</li>
-          <li>Archivage</li>
-          <li>Gestion des achats et des ventes</li>
-          <li>Mise en règlement des fournisseurs</li>
-        </ul>
-        <button class="cta">Bye bye le stress</button>
-      </div>
+    <div class="qui-container">
+      <section class="services-hero">
+        <h3 class="section-title">Services</h3>
+        <p class="section-intro">Mes services sont spécialement conçus pour répondre aux besoins des artisans et restaurateurs. Je vous offre un accompagnement sur mesure pour la gestion de votre entreprise, la promotion de vos produits et services, et la fidélisation de votre clientèle. Concentrez-vous sur votre savoir‑faire, je m'occupe du reste !</p>
+      </section>
 
-      <div class="services-community">
-        <h4>Community manager</h4>
-        <p><strong>Forfait 600 €/mois – 3 post par semaine</strong></p>
-        <ul>
-          <li>Création de publications</li>
-          <li>Programmation & suivi des contenus</li>
-          <li>Gestion du calendrier éditorial</li>
-          <li>Analyse et reporting mensuel des résultats</li>
-          <li>Gestion de communautés (DM et commentaires)</li>
-        </ul>
-        <button class="cta">Je veux plus de followers !</button>
-      </div>
+      <!-- Row 1: image left, copy right -->
+      <section class="service-row">
+        <div class="service-img">
+          <img src="service-admin.jpg" alt="Gestion administrative et commerciale">
+        </div>
+        <div class="service-card">
+          <h4>Gestion administrative et commerciale</h4>
+          <p>Je vous propose un accompagnement sur mesure pour la gestion administrative et commerciale de votre entreprise. Je prends en charge les tâches chronophages afin de vous permettre de vous concentrer sur votre cœur de métier.</p>
+          <p>Profitez de mon expertise pour optimiser vos processus et vous consacrer à votre cœur de métier.</p>
+          <a href="service-admin.html" class="cta inline">Je veux en savoir plus</a>
+        </div>
+      </section>
+
+      <!-- Row 2: copy left, image right -->
+      <section class="service-row reverse">
+        <div class="service-card">
+          <h4>Community Management</h4>
+          <p>Développez votre présence en ligne grâce à mon service de community management. J'anime vos réseaux sociaux, je crée du contenu engageant et je veille sur votre communauté.</p>
+          <p>Bénéficiez d'une stratégie de communication efficace pour accroître votre notoriété et fidéliser votre clientèle.</p>
+          <a href="service-social.html" class="cta inline">Je veux me lancer !</a>
+        </div>
+        <div class="service-img">
+          <img src="service-social.jpg" alt="Réseaux sociaux et community management">
+        </div>
+      </section>
     </div>
   </main>
 
