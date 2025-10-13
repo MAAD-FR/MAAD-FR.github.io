@@ -184,6 +184,59 @@ footer {
   .home-header .logo-large { width: 70vw; max-width: 270px; }
 }
 
+/* ---------- Contact page ---------- */
+.contact-form h3 { font-size: 2.2em; font-weight: 700; margin: 0.8em 0 0.4em 0; color: var(--color-strong); }
+.contact-intro { margin: 0 0 1.2rem; line-height: 1.6; color: var(--color-strong); }
+
+#contactForm label { display: block; font-weight: 600; margin: 0.7rem 0 0.35rem 0; color: var(--color-strong); }
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+  width: 100%;
+  background: var(--color-bg);
+  border: 1px solid #eadfc8;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  font: inherit;
+  color: var(--color-strong);
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05) inset;
+}
+#contactForm textarea { resize: vertical; }
+#contactForm input:focus,
+#contactForm textarea:focus { border-color: #cdbfa2; box-shadow: 0 0 0 3px rgba(205,191,162,0.25); }
+
+.checkline { display: inline-flex; align-items: center; gap: 0.45rem; margin: 0.8rem 0 1rem 0; font-size: 0.98em; }
+.contact-form p { margin: 0 0 1rem; line-height: 1.6; }
+
+/* desktop layout tweak: move the right card slightly right */
+@media (min-width: 901px) {
+  .contact-form { flex: 1 1 61%; margin-right: 1.6rem; }
+  .qui-photo    { flex: 1 1 39%; padding-left: 0.6rem; }
+}
+
+.contact-card { text-align: center; margin-top: 0.9rem; }
+.contact-name { font-size: 1.15em; margin-bottom: 1rem; }
+.contact-sub { font-size: 0.85em; color: var(--color-strong); margin-bottom: 0.5rem; }
+.contact-label { margin-top: 0.9rem; font-weight: 700; color: var(--color-strong); margin-bottom: 0.6rem; }
+.contact-phone { text-decoration: none; color: var(--color-strong); }
+.contact-phone:hover { text-decoration: underline; }
+
+/* icon + text in one row */
+.contact-line { display: flex; align-items: center; justify-content: center; gap: 0.45rem; margin-bottom: 0.9rem; }
+.contact-line img.contact-icon { width: 35px; height: 35px; display: block; filter: grayscale(30%); }
+
+/* alternative grid wrapper */
+.contact-rows { display: grid; grid-template-columns: 35px auto; align-items: center; justify-content: center; column-gap: 0.5rem; row-gap: 0.9rem; margin-bottom: 1rem; }
+.contact-card .contact-icon { width: 35px; height: 35px; }
+
+/* mobile icon size */
+@media (max-width: 900px) {
+  .contact-form { max-width: 100%; }
+  .contact-line img.contact-icon,
+  .contact-card .contact-icon { width: 24px; height: 24px; }
+}
+
 /* ------------------ Services Landing Page ------------------ */
 .section-title { font-size: 2.2em; font-weight: 700; color: var(--color-brand); text-align: center; margin: 0.2em 0 0.3em 0; }
 .section-intro { text-align: center; color: var(--color-strong); line-height: 1.7; max-width: 900px; margin: 0 auto 1.2em auto; }
@@ -217,11 +270,7 @@ footer {
 .service-table-cell { padding: 0.6em 1em; font-size: 0.9em; line-height: 1.3; color: var(--color-strong); text-align: center; }
 
 .service-pricing { font-size: 1.2em; font-weight: 700; color: var(--color-strong); text-align: right; margin-top: 2em; }
-.service-nav-button {
-  display: block; align-self: center; margin: 0.4em auto 5em auto; width: fit-content; max-width: 90vw;
-  background: var(--color-brand); color: white; text-align: center; padding: 0.8em 1.5em; border-radius: 12px; font-size: 1em; font-weight: 700;
-  text-decoration: none; transition: background 0.2s;
-}
+.service-nav-button { display: block; align-self: center; margin: 0.4em auto 5em auto; width: fit-content; max-width: 90vw; background: var(--color-brand); color: white; text-align: center; padding: 0.8em 1.5em; border-radius: 12px; font-size: 1em; font-weight: 700; text-decoration: none; transition: background 0.2s; }
 .service-nav-button:hover { background: var(--color-brand-dark); }
 
 /* Responsive for service detail pages */
