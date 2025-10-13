@@ -70,7 +70,19 @@ header {
   margin-bottom: 1em;
   margin-top: 1em;
 }
+@media (max-width: 900px) {
+  .home-header .logo-large {
+    width: 66vw;      /* fluid width on small screens */
+    max-width: 270px; /* ≈ 3 × 90px */
+  }
+}
 
+@media (max-width: 600px) {
+  .home-header .logo-large {
+    width: 70vw;      /* a touch larger on very small screens */
+    max-width: 270px; /* keep the cap at ~3× */
+  }
+}
 .brand {
   display: flex;
   align-items: center;
