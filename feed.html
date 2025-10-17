@@ -1,42 +1,167 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>M.A.A.D - Feed</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="bento.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="bento.css" />
   <script src="include.js" defer></script>
 </head>
 <body>
   <div data-include="header.html"></div>
 
-  <main>
-    <div class="bento-grid">
-      <!-- Instagram Reel 1 - Tall tile -->
-      <div class="tile tile--tall">
-        <iframe src="https://www.instagram.com/reel/DP5rXbKgWYn/embed" 
-                allowfullscreen
-                title="Instagram Reel 1"></iframe>
-      </div>
+  <main class="showcase">
+    <header class="showcase__header">
+      <h1>Feed</h1>
+      <p>Publications récentes (Instagram & LinkedIn)</p>
+    </header>
 
-      <!-- Instagram Reel 2 - Tall tile -->
-      <div class="tile tile--tall">
-        <iframe src="https://www.instagram.com/reel/DOaunxrDZkX/embed" 
-                allowfullscreen
-                title="Instagram Reel 2"></iframe>
-      </div>
+    <section class="bento-grid" aria-label="Grille de posts">
 
-      <!-- Instagram Reel 3 - Tall tile -->
-      <div class="tile tile--tall">
-        <iframe src="https://www.instagram.com/reel/DNiWyODsDf4/embed" 
-                allowfullscreen
-                title="Instagram Reel 3"></iframe>
-      </div>
-    </div>
+      <!-- Instagram Reels (vertical 9:16) -->
+      <article class="tile tile--tall">
+        <div class="tile__content">
+          <h2 class="tile__title">Reel Instagram</h2>
+          <div class="embed embed--9x16">
+            <iframe
+              src="https://www.instagram.com/reel/DP5rXbKgWYn/embed"
+              title="Instagram Reel DP5rXbKgWYn"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile tile--tall">
+        <div class="tile__content">
+          <h2 class="tile__title">Reel Instagram</h2>
+          <div class="embed embed--9x16">
+            <iframe
+              src="https://www.instagram.com/reel/DOaunxrDZkX/embed"
+              title="Instagram Reel DOaunxrDZkX"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile tile--tall">
+        <div class="tile__content">
+          <h2 class="tile__title">Reel Instagram</h2>
+          <div class="embed embed--9x16">
+            <iframe
+              src="https://www.instagram.com/reel/DNiWyODsDf4/embed"
+              title="Instagram Reel DNiWyODsDf4"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </article>
+
+      <!-- Instagram Posts (square 1:1) -->
+      <article class="tile">
+        <div class="tile__content">
+          <h2 class="tile__title">Post Instagram</h2>
+          <div class="embed embed--1x1">
+            <iframe
+              src="https://www.instagram.com/p/DP0omm3jUwY/embed"
+              title="Instagram Post DP0omm3jUwY"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile">
+        <div class="tile__content">
+          <h2 class="tile__title">Post Instagram</h2>
+          <div class="embed embed--1x1">
+            <iframe
+              src="https://www.instagram.com/p/DOx5mJRjKKR/embed"
+              title="Instagram Post DOx5mJRjKKR"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile">
+        <div class="tile__content">
+          <h2 class="tile__title">Post Instagram</h2>
+          <div class="embed embed--1x1">
+            <iframe
+              src="https://www.instagram.com/p/DOtvfi9DMQM/embed"
+              title="Instagram Post DOtvfi9DMQM"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile">
+        <div class="tile__content">
+          <h2 class="tile__title">Post Instagram</h2>
+          <div class="embed embed--1x1">
+            <iframe
+              src="https://www.instagram.com/p/DOIfWveDi91/embed"
+              title="Instagram Post DOIfWveDi91"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </article>
+
+      <!-- LinkedIn posts (auto height) -->
+      <article class="tile tile--auto">
+        <div class="tile__content">
+          <h2 class="tile__title">LinkedIn</h2>
+          <iframe
+            data-embed="linkedin"
+            src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7383750981047730176"
+            title="Publication LinkedIn 7383750981047730176"
+            frameborder="0"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="tile tile--auto">
+        <div class="tile__content">
+          <h2 class="tile__title">LinkedIn</h2>
+          <iframe
+            data-embed="linkedin"
+            src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7376918454328659968"
+            title="Publication LinkedIn 7376918454328659968"
+            frameborder="0"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="tile tile--auto">
+        <div class="tile__content">
+          <h2 class="tile__title">LinkedIn</h2>
+          <iframe
+            data-embed="linkedin"
+            src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7371075051871318016"
+            title="Publication LinkedIn 7371075051871318016"
+            frameborder="0"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <!-- If you want the duplicated LinkedIn link to appear twice, duplicate its tile above -->
+
+    </section>
   </main>
 
   <div data-include="footer.html"></div>
