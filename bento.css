@@ -14,13 +14,13 @@
   display: grid;
   grid-auto-flow: dense;
   gap: clamp(10px, 1.25vw, 18px);
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   align-items: stretch;
   max-width: 1400px;
   margin-inline: auto;
 }
 
-/* Base tile */
+/* Base tile - auto-height by default */
 .tile {
   position: relative;
   display: block;
@@ -49,14 +49,14 @@
   margin: 0;
 }
 
-/* Grid sizing with aspect ratios */
-.tile { aspect-ratio: 1 / 1; grid-column: span 1; grid-row: span 1; }
-.tile--wide  { aspect-ratio: 2 / 1; grid-column: span 2; grid-row: span 1; }
-.tile--tall  { aspect-ratio: 1 / 2; grid-column: span 1; grid-row: span 2; }
-.tile--large { aspect-ratio: 2 / 2; grid-column: span 2; grid-row: span 2; }
-.tile--auto  { aspect-ratio: auto; }
+/* Grid sizing - optional aspect ratio helpers for curated tiles */
+.tile { grid-column: span 1; grid-row: span 1; }
+.tile--wide  { grid-column: span 2; grid-row: span 1; }
+.tile--ratio-1x1  { aspect-ratio: 1 / 1; }
+.tile--ratio-16x9 { aspect-ratio: 16 / 9; }
+.tile--ratio-9x16 { aspect-ratio: 9 / 16; }
 
-/* Embeds */
+/* Embeds - aspect ratio wrappers for curated content (not used for external embeds) */
 .embed {
   position: relative;
   width: 100%;
@@ -76,28 +76,53 @@
   height: 100%;
 }
 
-/* LinkedIn iframe sizing for auto-height tiles */
-iframe[data-embed="linkedin"] {
+/* Auto-height embeds for external social content */
+.embed--frameAuto {
+  position: static;
+  background: transparent;
+}
+
+.embed--frameAuto iframe {
+  position: static;
   width: 100%;
-  height: clamp(520px, 70vh, 780px);
   border: 0;
-  background: rgba(0,0,0,0.02);
   border-radius: 8px;
 }
 
+/* Instagram Reels */
+.embed--frameAuto iframe[src*="instagram.com/reel"] {
+  height: clamp(560px, 80vh, 900px);
+}
+
+/* Instagram Posts */
+.embed--frameAuto iframe[src*="instagram.com/p"] {
+  height: clamp(420px, 65vh, 720px);
+}
+
+/* LinkedIn posts */
+.embed--frameAuto iframe[src*="linkedin.com"] {
+  height: clamp(520px, 70vh, 780px);
+}
+
 /* Responsive adjustments */
-@media (max-width: 700px) {
-  .bento-grid { grid-template-columns: 1fr 1fr; }
-  .tile--tall  { aspect-ratio: 1 / 1.2; grid-column: span 1; grid-row: span 1; }
-  .tile--large { aspect-ratio: 2 / 1.2; grid-column: span 2; grid-row: span 1; }
+@media (max-width: 768px) {
+  .bento-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 }
 
 @media (max-width: 480px) {
   .bento-grid { grid-template-columns: 1fr; }
-  .tile--wide,
-  .tile--tall,
-  .tile--large { aspect-ratio: 1 / 1; grid-column: span 1; grid-row: span 1; }
-  iframe[data-embed="linkedin"] { height: clamp(480px, 60vh, 650px); }
+  .tile--wide { grid-column: span 1; }
+  
+  /* Adjust embed heights for mobile */
+  .embed--frameAuto iframe[src*="instagram.com/reel"] {
+    height: clamp(480px, 70vh, 700px);
+  }
+  .embed--frameAuto iframe[src*="instagram.com/p"] {
+    height: clamp(380px, 60vh, 600px);
+  }
+  .embed--frameAuto iframe[src*="linkedin.com"] {
+    height: clamp(480px, 60vh, 650px);
+  }
 }
 
 /* Light/Dark friendly defaults */
