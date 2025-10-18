@@ -71,16 +71,16 @@
    TILE SIZING - Column Spans
    ======================================== */
 
-/* Instagram Reels: 1 column wide, half height - reduced by 50% */
+/* Instagram Reels: 1 column wide, half height */
 .tile--reel {
   grid-column: span 1;
-  min-height: 158px; /* Half of previous 315px (which was already half) */
+  min-height: 450px; /* Half of standard 900px tile height */
 }
 
 /* Facebook posts: 1 column wide, half height */
 .tile--facebook {
   grid-column: span 1;
-  min-height: 158px; /* Same as reels - half height */
+  min-height: 450px; /* Same as reels - half height */
 }
 
 /* Instagram Posts & LinkedIn: 2 columns wide */
