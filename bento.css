@@ -12,9 +12,9 @@
 
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: clamp(10px, 1.25vw, 18px);
-  max-width: 1400px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+  max-width: 1200px;
   margin-inline: auto;
 }
 
@@ -29,6 +29,7 @@
   border-radius: var(--radius, 12px);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  min-height: 400px;
 }
 
 .tile:hover {
@@ -82,6 +83,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
 .embed--frameAuto iframe {
@@ -89,53 +91,40 @@
   width: 100%;
   border: 0;
   border-radius: 8px;
-  flex: 1;
+  display: block;
 }
 
 /* Instagram Reels */
 .embed--frameAuto iframe[src*="instagram.com/reel"] {
-  min-height: 560px;
-  max-height: 900px;
-  height: 80vh;
+  height: 600px;
 }
 
 /* Instagram Posts */
 .embed--frameAuto iframe[src*="instagram.com/p"] {
-  min-height: 420px;
-  max-height: 720px;
-  height: 65vh;
+  height: 500px;
 }
 
 /* LinkedIn posts */
 .embed--frameAuto iframe[src*="linkedin.com"] {
-  min-height: 520px;
-  max-height: 780px;
-  height: 70vh;
+  height: 600px;
 }
 
 /* Responsive adjustments */
-@media (max-width: 900px) {
-  .bento-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
-}
-
-@media (max-width: 600px) {
-  .bento-grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .bento-grid { 
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 2vw, 20px);
+  }
   
   /* Adjust embed heights for mobile */
   .embed--frameAuto iframe[src*="instagram.com/reel"] {
-    min-height: 480px;
-    max-height: 700px;
-    height: 70vh;
+    height: 500px;
   }
   .embed--frameAuto iframe[src*="instagram.com/p"] {
-    min-height: 380px;
-    max-height: 600px;
-    height: 60vh;
+    height: 450px;
   }
   .embed--frameAuto iframe[src*="linkedin.com"] {
-    min-height: 480px;
-    max-height: 650px;
-    height: 60vh;
+    height: 500px;
   }
 }
 
