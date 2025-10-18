@@ -5,7 +5,7 @@
 }
 
 .showcase__header {
-  max-width: 1200px;
+  max-width: 1500px;
   margin-inline: auto;
   margin-bottom: 1rem;
 }
@@ -24,7 +24,7 @@
   grid-auto-flow: dense;
   /* Gap between tiles */
   gap: clamp(16px, 2vw, 24px);
-  max-width: 1200px;
+  max-width: 1500px;
   margin-inline: auto;
 }
 
@@ -44,7 +44,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   
   /* ⚙️ TILE HEIGHT CONTROL - Adjust here if needed */
-  min-height: 450px; /* Increased from 400px for taller tiles */
+  min-height: 630px; /* Increased by 40% from 450px */
 }
 
 .tile:hover {
@@ -70,9 +70,10 @@
    TILE SIZING - Column Spans
    ======================================== */
 
-/* Instagram Reels: 1 column wide */
+/* Instagram Reels: 1 column wide, half height */
 .tile--reel {
   grid-column: span 1;
+  min-height: 315px; /* Half of standard 630px tile height */
 }
 
 /* Instagram Posts & LinkedIn: 2 columns wide */
@@ -84,7 +85,7 @@
 /* Facebook posts & future images: 1 column wide, half row height */
 .tile--small {
   grid-column: span 1;
-  min-height: 225px; /* Half of standard tile height */
+  min-height: 315px; /* Half of standard 630px tile height */
 }
 
 /* Legacy wide class for backwards compatibility */
@@ -139,17 +140,17 @@
 
 /* Instagram Reels (vertical content) */
 .embed--frameAuto iframe[src*="instagram.com/reel"] {
-  height: 650px; /* Increased for taller display */
+  height: 910px; /* Increased by 40% from 650px */
 }
 
 /* Instagram Posts (square content) */
 .embed--frameAuto iframe[src*="instagram.com/p"] {
-  height: 550px; /* Increased for taller display */
+  height: 770px; /* Increased by 40% from 550px */
 }
 
 /* LinkedIn posts */
 .embed--frameAuto iframe[src*="linkedin.com"] {
-  height: 650px; /* Increased for taller display */
+  height: 910px; /* Increased by 40% from 650px */
 }
 
 /* ========================================
@@ -182,13 +183,13 @@
   
   /* Adjust embed heights for mobile */
   .embed--frameAuto iframe[src*="instagram.com/reel"] {
-    height: 550px;
+    height: 770px; /* Increased by 40% from 550px */
   }
   .embed--frameAuto iframe[src*="instagram.com/p"] {
-    height: 500px;
+    height: 700px; /* Increased by 40% from 500px */
   }
   .embed--frameAuto iframe[src*="linkedin.com"] {
-    height: 550px;
+    height: 770px; /* Increased by 40% from 550px */
   }
 }
 
