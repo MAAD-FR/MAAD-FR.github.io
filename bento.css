@@ -44,7 +44,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   
   /* ⚙️ TILE HEIGHT CONTROL - Adjust here if needed */
-  min-height: 630px; /* Increased by 40% from 450px */
+  min-height: 700px; /* Increased by 40% from 450px */
 }
 
 .tile:hover {
