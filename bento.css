@@ -74,13 +74,15 @@
 /* Instagram Reels: 1 column wide, half height */
 .tile--reel {
   grid-column: span 1;
-  min-height: 450px; /* Half of standard 900px tile height */
+  min-height: 450px !important; /* Half of standard 900px tile height - override base */
+  max-height: 450px; /* Enforce half height */
 }
 
 /* Facebook posts: 1 column wide, half height */
 .tile--facebook {
   grid-column: span 1;
-  min-height: 450px; /* Same as reels - half height */
+  min-height: 450px !important; /* Same as reels - half height - override base */
+  max-height: 450px; /* Enforce half height */
 }
 
 /* Instagram Posts & LinkedIn: 2 columns wide */
