@@ -5,7 +5,7 @@
 }
 
 .showcase__header {
-  max-width: 1500px;
+  max-width: 1875px; /* Increased by 25% from 1500px */
   margin-inline: auto;
   margin-bottom: 1rem;
 }
@@ -24,7 +24,7 @@
   grid-auto-flow: dense;
   /* Gap between tiles */
   gap: clamp(16px, 2vw, 24px);
-  max-width: 1500px;
+  max-width: 1875px; /* Increased by 25% from 1500px */
   margin-inline: auto;
 }
 
@@ -64,16 +64,23 @@
   font-size: clamp(16px, 1.4rem, 20px);
   line-height: 1.2;
   margin: 0;
+  display: none; /* Hide tile titles */
 }
 
 /* ========================================
    TILE SIZING - Column Spans
    ======================================== */
 
-/* Instagram Reels: 1 column wide, half height */
+/* Instagram Reels: 1 column wide, half height - reduced by 50% */
 .tile--reel {
   grid-column: span 1;
-  min-height: 315px; /* Half of standard 630px tile height */
+  min-height: 158px; /* Half of previous 315px (which was already half) */
+}
+
+/* Facebook posts: 1 column wide, half height */
+.tile--facebook {
+  grid-column: span 1;
+  min-height: 158px; /* Same as reels - half height */
 }
 
 /* Instagram Posts & LinkedIn: 2 columns wide */
@@ -140,17 +147,22 @@
 
 /* Instagram Reels (vertical content) */
 .embed--frameAuto iframe[src*="instagram.com/reel"] {
-  height: 910px; /* Increased by 40% from 650px */
+  height: 1047px; /* Increased by 15% from 910px */
 }
 
 /* Instagram Posts (square content) */
 .embed--frameAuto iframe[src*="instagram.com/p"] {
-  height: 770px; /* Increased by 40% from 550px */
+  height: 886px; /* Increased by 15% from 770px */
 }
 
 /* LinkedIn posts */
 .embed--frameAuto iframe[src*="linkedin.com"] {
-  height: 910px; /* Increased by 40% from 650px */
+  height: 1047px; /* Increased by 15% from 910px */
+}
+
+/* Facebook posts */
+.embed--frameAuto iframe[src*="facebook.com"] {
+  height: 1047px; /* Same as LinkedIn */
 }
 
 /* ========================================
@@ -177,19 +189,23 @@
   .tile--post,
   .tile--linkedin,
   .tile--small,
+  .tile--facebook,
   .tile--wide {
     grid-column: span 1;
   }
   
   /* Adjust embed heights for mobile */
   .embed--frameAuto iframe[src*="instagram.com/reel"] {
-    height: 770px; /* Increased by 40% from 550px */
+    height: 886px; /* Increased by 15% from 770px */
   }
   .embed--frameAuto iframe[src*="instagram.com/p"] {
-    height: 700px; /* Increased by 40% from 500px */
+    height: 805px; /* Increased by 15% from 700px */
   }
   .embed--frameAuto iframe[src*="linkedin.com"] {
-    height: 770px; /* Increased by 40% from 550px */
+    height: 886px; /* Increased by 15% from 770px */
+  }
+  .embed--frameAuto iframe[src*="facebook.com"] {
+    height: 886px; /* Same as LinkedIn */
   }
 }
 
