@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>M.A.A.D - Feed</title>
+
+  <!-- Performance: DNS prefetch + preconnect for social embeds -->
+  <link rel="dns-prefetch" href="//www.instagram.com">
+  <link rel="preconnect" href="https://www.instagram.com">
+  <link rel="dns-prefetch" href="//www.linkedin.com">
+  <link rel="preconnect" href="https://www.linkedin.com">
+  <link rel="dns-prefetch" href="//www.facebook.com">
+  <link rel="preconnect" href="https://www.facebook.com">
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="bento.css" />
   <script src="include.js" defer></script>
@@ -13,13 +22,10 @@
 
   <main class="showcase">
     <header class="showcase__header">
-      <h1>Feed</h1>
       <p>Publications récentes (Instagram & LinkedIn)</p>
     </header>
 
     <section class="bento-grid" aria-label="Grille de posts">
-
-      <!-- Instagram Reels (vertical 9:16) - 1 column wide -->
       <article class="tile tile--reel">
         <div class="tile__content">
           <h2 class="tile__title">Reel Instagram</h2>
@@ -62,7 +68,6 @@
         </div>
       </article>
 
-      <!-- Instagram Posts (square 1:1) - 2 columns wide -->
       <article class="tile tile--post">
         <div class="tile__content">
           <h2 class="tile__title">Post Instagram</h2>
@@ -119,7 +124,6 @@
         </div>
       </article>
 
-      <!-- LinkedIn posts - 2 columns wide -->
       <article class="tile tile--linkedin">
         <div class="tile__content">
           <h2 class="tile__title">LinkedIn</h2>
@@ -162,7 +166,6 @@
         </div>
       </article>
 
-      <!-- Facebook posts - 1 column wide, half height -->
       <article class="tile tile--facebook">
         <div class="tile__content">
           <h2 class="tile__title">Facebook</h2>
@@ -190,7 +193,6 @@
           </div>
         </div>
       </article>
-
     </section>
   </main>
 
