@@ -72,7 +72,7 @@ h2 { font-size: 1.05em; font-weight: 400; color: var(--color-muted); margin-bott
 }
 .horizontal-nav .nav-btn:hover { background: #e8d7c3; }
 .horizontal-nav .nav-btn.home-icon {
-  padding: 0.4em 0.55em;
+  padding: 0.4em 0.3em;
   font-size: 1.1em;
   line-height: 1;
   display: flex;
