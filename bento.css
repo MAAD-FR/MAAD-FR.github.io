@@ -5,31 +5,46 @@
 }
 
 .showcase__header {
-  max-width: 1200px;
+  max-width: 1875px; /* Increased by 25% from 1500px */
   margin-inline: auto;
   margin-bottom: 1rem;
 }
 
+/* ========================================
+   BENTO GRID LAYOUT
+   ======================================== */
+
 .bento-grid {
   display: grid;
+  /* 4 equal columns on desktop/tablet, stacks on mobile */
+  grid-template-columns: repeat(4, 1fr);
+  /* Rows auto-generated as needed */
+  grid-auto-rows: auto;
+  /* Dense packing to fill gaps intelligently */
   grid-auto-flow: dense;
-  gap: clamp(10px, 1.25vw, 18px);
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  align-items: stretch;
-  max-width: 1400px;
+  /* Gap between tiles */
+  gap: clamp(16px, 2vw, 24px);
+  max-width: 1875px; /* Increased by 25% from 1500px */
   margin-inline: auto;
 }
 
-/* Base tile */
+/* ========================================
+   TILE BASE STYLES
+   ======================================== */
+
 .tile {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--bento-tile-bg, rgba(0, 0, 0, 0.03));
   color: inherit;
   border: 1px solid var(--bento-tile-border, rgba(0, 0, 0, 0.08));
   border-radius: var(--radius, 12px);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  
+  /* ⚙️ TILE HEIGHT CONTROL - Adjust here if needed */
+  min-height: 900px; /* Increased by 40% from 450px */
 }
 
 .tile:hover {
@@ -39,24 +54,60 @@
 
 .tile__content {
   padding: clamp(12px, 1.5vw, 18px);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
+  flex: 1;
 }
 
 .tile__title {
   font-size: clamp(16px, 1.4rem, 20px);
   line-height: 1.2;
   margin: 0;
+  display: none; /* Hide tile titles */
 }
 
-/* Grid sizing with aspect ratios */
-.tile { aspect-ratio: 1 / 1; grid-column: span 1; grid-row: span 1; }
-.tile--wide  { aspect-ratio: 2 / 1; grid-column: span 2; grid-row: span 1; }
-.tile--tall  { aspect-ratio: 1 / 2; grid-column: span 1; grid-row: span 2; }
-.tile--large { aspect-ratio: 2 / 2; grid-column: span 2; grid-row: span 2; }
-.tile--auto  { aspect-ratio: auto; }
+/* ========================================
+   TILE SIZING - Column Spans
+   ======================================== */
 
-/* Embeds */
+/* Instagram Reels: 1 column wide, half height */
+.tile--reel {
+  grid-column: span 1;
+  min-height: 450px !important; /* Half of standard 900px tile height - override base */
+  max-height: 450px; /* Enforce half height */
+}
+
+/* Facebook posts: 1 column wide, half height */
+.tile--facebook {
+  grid-column: span 1;
+  min-height: 450px !important; /* Same as reels - half height - override base */
+  max-height: 450px; /* Enforce half height */
+}
+
+/* Instagram Posts & LinkedIn: 2 columns wide */
+.tile--post,
+.tile--linkedin {
+  grid-column: span 2;
+}
+
+/* Facebook posts & future images: 1 column wide, half row height */
+.tile--small {
+  grid-column: span 1;
+  min-height: 315px; /* Half of standard 630px tile height */
+}
+
+/* Legacy wide class for backwards compatibility */
+.tile--wide {
+  grid-column: span 2;
+}
+
+/* Optional aspect ratio helpers for curated tiles */
+.tile--ratio-1x1  { aspect-ratio: 1 / 1; }
+.tile--ratio-16x9 { aspect-ratio: 16 / 9; }
+.tile--ratio-9x16 { aspect-ratio: 9 / 16; }
+
+/* Embeds - aspect ratio wrappers for curated content (not used for external embeds) */
 .embed {
   position: relative;
   width: 100%;
@@ -76,28 +127,88 @@
   height: 100%;
 }
 
-/* LinkedIn iframe sizing for auto-height tiles */
-iframe[data-embed="linkedin"] {
+/* Auto-height embeds for external social content */
+.embed--frameAuto {
+  position: static;
+  background: transparent;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.embed--frameAuto iframe {
+  position: static;
   width: 100%;
-  height: clamp(520px, 70vh, 780px);
   border: 0;
-  background: rgba(0,0,0,0.02);
   border-radius: 8px;
+  display: block;
 }
 
-/* Responsive adjustments */
-@media (max-width: 700px) {
-  .bento-grid { grid-template-columns: 1fr 1fr; }
-  .tile--tall  { aspect-ratio: 1 / 1.2; grid-column: span 1; grid-row: span 1; }
-  .tile--large { aspect-ratio: 2 / 1.2; grid-column: span 2; grid-row: span 1; }
+/* ⚙️ EMBED HEIGHT CONTROL - Adjust iframe heights here if needed */
+
+/* Instagram Reels (vertical content) */
+.embed--frameAuto iframe[src*="instagram.com/reel"] {
+  height: 1047px; /* Increased by 15% from 910px */
 }
 
-@media (max-width: 480px) {
-  .bento-grid { grid-template-columns: 1fr; }
-  .tile--wide,
-  .tile--tall,
-  .tile--large { aspect-ratio: 1 / 1; grid-column: span 1; grid-row: span 1; }
-  iframe[data-embed="linkedin"] { height: clamp(480px, 60vh, 650px); }
+/* Instagram Posts (square content) */
+.embed--frameAuto iframe[src*="instagram.com/p"] {
+  height: 886px; /* Increased by 15% from 770px */
+}
+
+/* LinkedIn posts */
+.embed--frameAuto iframe[src*="linkedin.com"] {
+  height: 1047px; /* Increased by 15% from 910px */
+}
+
+/* Facebook posts */
+.embed--frameAuto iframe[src*="facebook.com"] {
+  height: 1047px; /* Same as LinkedIn */
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+@media (max-width: 900px) {
+  /* Tablet: still 4 columns but narrower */
+  .bento-grid { 
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* Keep tile sizing the same on tablet */
+}
+
+@media (max-width: 600px) {
+  /* Mobile: single column, tiles stack */
+  .bento-grid { 
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 2vw, 20px);
+  }
+  
+  /* All tiles become full width on mobile */
+  .tile--reel,
+  .tile--post,
+  .tile--linkedin,
+  .tile--small,
+  .tile--facebook,
+  .tile--wide {
+    grid-column: span 1;
+  }
+  
+  /* Adjust embed heights for mobile */
+  .embed--frameAuto iframe[src*="instagram.com/reel"] {
+    height: 886px; /* Increased by 15% from 770px */
+  }
+  .embed--frameAuto iframe[src*="instagram.com/p"] {
+    height: 805px; /* Increased by 15% from 700px */
+  }
+  .embed--frameAuto iframe[src*="linkedin.com"] {
+    height: 886px; /* Increased by 15% from 770px */
+  }
+  .embed--frameAuto iframe[src*="facebook.com"] {
+    height: 886px; /* Same as LinkedIn */
+  }
 }
 
 /* Light/Dark friendly defaults */
